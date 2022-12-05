@@ -1,0 +1,370 @@
+I221205 05:09:35.004641 1 util/log/file_sync_buffer.go:238 ⋮ [config]   file created at: 2022/12/05 05:09:35
+I221205 05:09:35.004651 1 util/log/file_sync_buffer.go:238 ⋮ [config]   running on machine: ‹ecomkalaivanibm520›
+I221205 05:09:35.004660 1 util/log/file_sync_buffer.go:238 ⋮ [config]   binary: CockroachDB CCL v22.1.10 (x86_64-pc-linux-gnu, built 2022/10/27 19:46:05, go1.17.11)
+I221205 05:09:35.004666 1 util/log/file_sync_buffer.go:238 ⋮ [config]   arguments: [‹cockroach› ‹start-single-node› ‹--listen-addr=localhost:26257› ‹--http-addr=localhost:8080› ‹--insecure›]
+I221205 05:09:35.004680 1 util/log/file_sync_buffer.go:238 ⋮ [config]   log format (utf8=✓): crdb-v2
+I221205 05:09:35.004686 1 util/log/file_sync_buffer.go:238 ⋮ [config]   line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid [chan@]file:line redactionmark \[tags\] [counter] msg
+W221205 05:09:35.004491 1 1@cli/start.go:1181 ⋮ [n?] 1  ALL SECURITY CONTROLS HAVE BEEN DISABLED!
+W221205 05:09:35.004491 1 1@cli/start.go:1181 ⋮ [n?] 1 +
+W221205 05:09:35.004491 1 1@cli/start.go:1181 ⋮ [n?] 1 +This mode is intended for non-production testing only.
+W221205 05:09:35.004491 1 1@cli/start.go:1181 ⋮ [n?] 1 +
+W221205 05:09:35.004491 1 1@cli/start.go:1181 ⋮ [n?] 1 +In this mode:
+W221205 05:09:35.004491 1 1@cli/start.go:1181 ⋮ [n?] 1 +- Your cluster is open to any client that can access ‹localhost›.
+W221205 05:09:35.004491 1 1@cli/start.go:1181 ⋮ [n?] 1 +- Intruders with access to your machine or network can observe client-server traffic.
+W221205 05:09:35.004491 1 1@cli/start.go:1181 ⋮ [n?] 1 +- Intruders can log in without password and read or write any data in the cluster.
+W221205 05:09:35.004491 1 1@cli/start.go:1181 ⋮ [n?] 1 +- Intruders can consume all your server's resources and cause unavailability.
+I221205 05:09:35.004829 1 1@cli/start.go:1191 ⋮ [n?] 2  To start a secure server without mandating TLS for clients,
+I221205 05:09:35.004829 1 1@cli/start.go:1191 ⋮ [n?] 2 +consider --accept-sql-without-tls instead. For other options, see:
+I221205 05:09:35.004829 1 1@cli/start.go:1191 ⋮ [n?] 2 +
+I221205 05:09:35.004829 1 1@cli/start.go:1191 ⋮ [n?] 2 +- ‹https://go.crdb.dev/issue-v/53404/v22.1›
+I221205 05:09:35.004829 1 1@cli/start.go:1191 ⋮ [n?] 2 +- https://www.cockroachlabs.com/docs/v22.1/secure-a-cluster.html
+I221205 05:09:35.005223 1 server/status/recorder.go:620 ⋮ [n?] 3  ‹available memory from cgroups (8.0 EiB) is unsupported, using system memory 15 GiB instead:›
+W221205 05:09:35.005256 1 1@cli/start.go:1107 ⋮ [n?] 4  ‹Using the default setting for --cache (128 MiB).›
+W221205 05:09:35.005256 1 1@cli/start.go:1107 ⋮ [n?] 4 +‹  A significantly larger value is usually needed for good performance.›
+W221205 05:09:35.005256 1 1@cli/start.go:1107 ⋮ [n?] 4 +‹  If you have a dedicated server a reasonable setting is --cache=.25 (3.8 GiB).›
+I221205 05:09:35.005498 1 server/status/recorder.go:620 ⋮ [n?] 5  ‹available memory from cgroups (8.0 EiB) is unsupported, using system memory 15 GiB instead:›
+I221205 05:09:35.005514 1 1@cli/start.go:1220 ⋮ [n?] 6  ‹CockroachDB CCL v22.1.10 (x86_64-pc-linux-gnu, built 2022/10/27 19:46:05, go1.17.11)›
+I221205 05:09:35.006676 1 server/status/recorder.go:620 ⋮ [n?] 7  ‹available memory from cgroups (8.0 EiB) is unsupported, using system memory 15 GiB instead:›
+I221205 05:09:35.006697 1 server/config.go:487 ⋮ [n?] 8  system total memory: 15 GiB
+I221205 05:09:35.006713 1 server/config.go:489 ⋮ [n?] 9  server configuration:
+I221205 05:09:35.006713 1 server/config.go:489 ⋮ [n?] 9 +‹max offset             500000000›
+I221205 05:09:35.006713 1 server/config.go:489 ⋮ [n?] 9 +‹cache size             128 MiB›
+I221205 05:09:35.006713 1 server/config.go:489 ⋮ [n?] 9 +‹SQL memory pool size   3.8 GiB›
+I221205 05:09:35.006713 1 server/config.go:489 ⋮ [n?] 9 +‹scan interval          10m0s›
+I221205 05:09:35.006713 1 server/config.go:489 ⋮ [n?] 9 +‹scan min idle time     10ms›
+I221205 05:09:35.006713 1 server/config.go:489 ⋮ [n?] 9 +‹scan max idle time     1s›
+I221205 05:09:35.006713 1 server/config.go:489 ⋮ [n?] 9 +‹event log enabled      true›
+I221205 05:09:35.006713 1 server/config.go:489 ⋮ [n?] 9 +‹span configs enabled   true›
+I221205 05:09:35.006829 1 1@cli/start.go:1085 ⋮ [n?] 10  using local environment variables:
+I221205 05:09:35.006829 1 1@cli/start.go:1085 ⋮ [n?] 10 +COCKROACH_BACKGROUND_RESTART=1
+I221205 05:09:35.006829 1 1@cli/start.go:1085 ⋮ [n?] 10 +LANG=‹en_GB.UTF-8›
+I221205 05:09:35.006829 1 1@cli/start.go:1085 ⋮ [n?] 10 +TERM=‹xterm-256color›
+I221205 05:09:35.006846 1 1@cli/start.go:1092 ⋮ [n?] 11  process identity: ‹uid 1001 euid 1001 gid 1001 egid 1001›
+I221205 05:09:35.014756 1 1@cli/start.go:1307 ⋮ [n?] 12  GEOS loaded from directory ‹/usr/local/lib/cockroach›
+I221205 05:09:35.014814 1 1@cli/start.go:576 ⋮ [n?] 13  starting cockroach node
+I221205 05:09:35.028116 32 server/config.go:665 ⋮ [n?] 14  1 storage engine‹› initialized
+I221205 05:09:35.028187 32 server/config.go:668 ⋮ [n?] 15  Pebble cache size: 128 MiB
+I221205 05:09:35.028211 32 server/config.go:668 ⋮ [n?] 16  store 0: max size 0 B, max open file limit 1043576
+I221205 05:09:35.028222 32 server/config.go:668 ⋮ [n?] 17  store 0: {Encrypted:false ReadOnly:false FileStoreProperties:{path=‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data›, fs=squashfs, blkdev=‹/dev/loop13›, mnt=‹/snap/core20/1738› opts=‹ro,nodev,relatime,errors=continue›}}
+I221205 05:09:35.033744 32 server/tracedumper/tracedumper.go:120 ⋮ [n?] 18  writing job trace dumps to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/inflight_trace_dump›
+I221205 05:09:35.072813 32 1@server/clock_monotonicity.go:65 ⋮ [n?] 19  monitoring forward clock jumps based on server.clock.forward_jump_check_enabled
+I221205 05:09:35.138048 32 server/init.go:197 ⋮ [n?] 20  no stores initialized
+I221205 05:09:35.138089 32 server/init.go:198 ⋮ [n?] 21  awaiting `cockroach init` or join with an already initialized node
+I221205 05:09:35.138104 32 server/init.go:262 ⋮ [n?] 22  cluster ‹0183e114-412f-42bb-8f90-770999054dc5› has been created
+I221205 05:09:35.138129 32 server/init.go:263 ⋮ [n?] 23  allocated node ID: n1 (for self)
+I221205 05:09:35.138147 32 server/init.go:264 ⋮ [n?] 24  active cluster version: 22.1
+I221205 05:09:35.139323 212 1@server/server.go:1307 ⋮ [n1] 25  connecting to gossip network to verify cluster ID ‹"0183e114-412f-42bb-8f90-770999054dc5"›
+W221205 05:09:35.141474 32 1@gossip/pkg/gossip/gossip.go:1531 ⋮ [n1] 26  no addresses found; use --join to specify a connected node
+I221205 05:09:35.141523 32 gossip/pkg/gossip/gossip.go:401 ⋮ [n1] 27  NodeDescriptor set to ‹node_id:1 address:<network_field:"tcp" address_field:"localhost:26257" > attrs:<> locality:<> ServerVersion:<major_val:22 minor_val:1 patch:0 internal:0 > build_tag:"v22.1.10" started_at:1670216975141515543 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26257" > http_address:<network_field:"tcp" address_field:"localhost:8080" >›
+I221205 05:09:35.147469 212 1@server/server.go:1310 ⋮ [n1] 28  node connected via gossip
+I221205 05:09:35.147294 32 server/node.go:469 ⋮ [n1] 29  initialized store s1
+I221205 05:09:35.147692 32 kv/kvserver/pkg/kv/kvserver/stores.go:250 ⋮ [n1] 30  read 0 node addresses from persistent storage
+I221205 05:09:35.148985 32 server/node.go:548 ⋮ [n1] 31  started with engine type ‹2›
+I221205 05:09:35.149038 32 server/node.go:550 ⋮ [n1] 32  started with attributes []
+I221205 05:09:35.149419 32 server/goroutinedumper/goroutinedumper.go:122 ⋮ [n1] 33  writing goroutine dumps to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/goroutine_dump›
+I221205 05:09:35.149738 32 server/heapprofiler/heapprofiler.go:49 ⋮ [n1] 34  writing go heap profiles to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/heap_profiler› at least every 1h0m0s
+I221205 05:09:35.149769 32 server/heapprofiler/cgoprofiler.go:53 ⋮ [n1] 35  to enable jmalloc profiling: "export MALLOC_CONF=prof:true" or "ln -s prof:true /etc/malloc.conf"
+I221205 05:09:35.149785 32 server/heapprofiler/statsprofiler.go:54 ⋮ [n1] 36  writing memory stats to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/heap_profiler› at last every 1h0m0s
+I221205 05:09:35.150044 32 server/heapprofiler/activequeryprofiler.go:85 ⋮ [n1] 37  writing go query profiles to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/heap_profiler›
+I221205 05:09:35.150131 32 1@server/server.go:1446 ⋮ [n1] 38  starting http server at ‹127.0.0.1:8080› (use: ‹localhost:8080›)
+I221205 05:09:35.150159 32 1@server/server.go:1453 ⋮ [n1] 39  starting grpc/postgres server at ‹127.0.0.1:26257›
+I221205 05:09:35.150182 32 1@server/server.go:1454 ⋮ [n1] 40  advertising CockroachDB node at ‹localhost:26257›
+I221205 05:09:35.212546 329 kv/kvclient/rangefeed/rangefeedcache/watcher.go:316 ⋮ [n1] 41  spanconfig-subscriber: established range feed cache
+W221205 05:09:35.232620 179 kv/range_lookup.go:243 ⋮ [n1,rangefeed=‹table-stats-cache›,range-lookup=‹/Meta2/Table/20/NULL›] 42  range lookup of key ‹/Meta2/Table/20/NULL› found only non-matching ranges []; retrying
+W221205 05:09:35.234888 178 kv/range_lookup.go:243 ⋮ [n1,rangefeed=‹table-stats-cache›,range-lookup=‹/Table/20›] 43  range lookup of key ‹/Table/20› found only non-matching ranges []; retrying
+I221205 05:09:35.239755 489 kv/kvserver/pkg/kv/kvserver/replica_rangefeed.go:703 ⋮ [n1,rangefeed=‹table-stats-cache›,s1,r16] 44  RangeFeed closed timestamp is empty
+I221205 05:09:35.260818 32 1@util/log/event_log.go:32 ⋮ [n1] 45 ={"Timestamp":1670216975260813886,"EventType":"node_join","NodeID":1,"StartedAt":1670216975141515543,"LastUp":1670216975141515543}
+I221205 05:09:35.261026 32 sql/sqlliveness/slinstance/slinstance.go:313 ⋮ [n1] 46  starting SQL liveness instance
+I221205 05:09:35.266034 520 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/provider.go:132 ⋮ [n1] 47  starting sql-stats-worker with initial delay: 10m0.627999154s
+I221205 05:09:35.266050 518 sql/temporary_schema.go:514 ⋮ [n1] 48  running temporary object cleanup background job
+I221205 05:09:35.266236 533 kv/kvclient/rangefeed/rangefeedcache/watcher.go:316 ⋮ [n1] 49  settings-watcher: established range feed cache
+I221205 05:09:35.266679 333 sql/sqlliveness/slstorage/slstorage.go:406 ⋮ [n1] 50  inserted sqlliveness session 76fd6987531b462280f7f6e0869bb703
+I221205 05:09:35.266983 333 sql/sqlliveness/slinstance/slinstance.go:198 ⋮ [n1] 51  created new SQL liveness session 76fd6987531b462280f7f6e0869bb703
+I221205 05:09:35.267172 563 kv/kvclient/rangefeed/rangefeedcache/watcher.go:316 ⋮ [n1] 52  system-config-cache: established range feed cache
+I221205 05:09:35.267285 518 sql/temporary_schema.go:559 ⋮ [n1] 53  found 0 temporary schemas
+I221205 05:09:35.267316 518 sql/temporary_schema.go:562 ⋮ [n1] 54  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 05:09:35.267333 518 sql/temporary_schema.go:563 ⋮ [n1] 55  completed temporary object cleanup job
+I221205 05:09:35.267347 518 sql/temporary_schema.go:646 ⋮ [n1] 56  temporary object cleaner next scheduled to run at 2022-12-05 05:39:35.265998534 +0000 UTC
+I221205 05:09:35.283419 532 spanconfig/spanconfigmanager/manager.go:147 ⋮ [n1] 57  started auto span config reconciliation job
+I221205 05:09:35.283484 586 jobs/adopt.go:241 ⋮ [n1] 58  job 819680297832382465: resuming execution
+I221205 05:09:35.292047 589 jobs/registry.go:1205 ⋮ [n1] 59  AUTO SPAN CONFIG RECONCILIATION job 819680297832382465: stepping through state running with error: <nil>
+I221205 05:09:35.319754 557 util/log/event_log.go:32 ⋮ [n1,intExec=‹optInToDiagnosticsStatReporting›] 60 ={"Timestamp":1670216975270977545,"EventType":"set_cluster_setting","Statement":"SET CLUSTER SETTING \"diagnostics.reporting.enabled\" = true","Tag":"SET CLUSTER SETTING","User":"root","ApplicationName":"$ internal-optInToDiagnosticsStatReporting","SettingName":"diagnostics.reporting.enabled","Value":"‹true›"}
+I221205 05:09:35.327777 676 migration/migrationmanager/manager.go:110 ⋮ [n1,intExec=‹set-setting›,migration-mgr] 61  no need to migrate, cluster already at newest version
+I221205 05:09:35.331814 676 util/log/event_log.go:32 ⋮ [n1,intExec=‹set-setting›] 62 ={"Timestamp":1670216975326670296,"EventType":"set_cluster_setting","Statement":"SET CLUSTER SETTING version = $1","Tag":"SET CLUSTER SETTING","User":"root","ApplicationName":"$ internal-set-setting","PlaceholderValues":["‹'22.1'›"],"SettingName":"version","Value":"‹22.1›"}
+I221205 05:09:35.345256 589 spanconfig/spanconfigsqlwatcher/sqlwatcher.go:263 ⋮ [n1,job=819680297832382465] 63  established range feed over system.descriptors starting at time 1670216975.311574716,0
+I221205 05:09:35.345314 589 spanconfig/spanconfigsqlwatcher/sqlwatcher.go:316 ⋮ [n1,job=819680297832382465] 64  established range feed over system.zones starting at time 1670216975.311574716,0
+I221205 05:09:35.345347 589 spanconfig/spanconfigsqlwatcher/sqlwatcher.go:411 ⋮ [n1,job=819680297832382465] 65  established range feed over system.protected_ts_records starting at time 1670216975.311574716,0
+I221205 05:09:35.367237 740 util/log/event_log.go:32 ⋮ [n1,intExec=‹initializeClusterSecret›] 66 ={"Timestamp":1670216975356042236,"EventType":"set_cluster_setting","Statement":"SET CLUSTER SETTING \"cluster.secret\" = gen_random_uuid()::STRING","Tag":"SET CLUSTER SETTING","User":"root","ApplicationName":"$ internal-initializeClusterSecret","SettingName":"cluster.secret","Value":"‹f20d469e-cf26-4249-a267-c4651ce3eaee›"}
+I221205 05:09:35.418527 32 server/server_sql.go:1290 ⋮ [n1] 67  done ensuring all necessary startup migrations have run
+I221205 05:09:35.418694 747 jobs/job_scheduler.go:433 ⋮ [n1] 68  waiting 4m0s before scheduled jobs daemon start
+I221205 05:09:35.418865 751 kv/kvclient/rangefeed/rangefeedcache/watcher.go:316 ⋮ [n1] 69  tenant-settings-watcher: established range feed cache
+I221205 05:09:35.420230 750 server/auto_upgrade.go:59 ⋮ [n1] 70  no need to upgrade, cluster already at the newest version
+I221205 05:09:35.448912 625 1@util/log/event_log.go:32 ⋮ [n1,intExec=‹set-zone›] 71 ={"Timestamp":1670216975444524067,"EventType":"set_zone_config","Statement":"ALTER RANGE ‹default› CONFIGURE ZONE USING ‹num_replicas› = ‹1›","Tag":"CONFIGURE ZONE","User":"root","ApplicationName":"$ internal-set-zone","Target":"‹RANGE default›","Options":["‹num_replicas = 1›"]}
+I221205 05:09:35.453766 835 1@util/log/event_log.go:32 ⋮ [n1,intExec=‹set-zone›] 72 ={"Timestamp":1670216975449193128,"EventType":"set_zone_config","Statement":"ALTER DATABASE ‹system› CONFIGURE ZONE USING ‹num_replicas› = ‹1›","Tag":"CONFIGURE ZONE","User":"root","DescriptorID":1,"ApplicationName":"$ internal-set-zone","Target":"‹DATABASE system›","Options":["‹num_replicas = 1›"]}
+I221205 05:09:35.458018 850 1@util/log/event_log.go:32 ⋮ [n1,intExec=‹set-zone›] 73 ={"Timestamp":1670216975454124749,"EventType":"set_zone_config","Statement":"ALTER RANGE ‹meta› CONFIGURE ZONE USING ‹num_replicas› = ‹1›","Tag":"CONFIGURE ZONE","User":"root","DescriptorID":16,"ApplicationName":"$ internal-set-zone","Target":"‹RANGE meta›","Options":["‹num_replicas = 1›"]}
+I221205 05:09:35.462141 841 1@util/log/event_log.go:32 ⋮ [n1,intExec=‹set-zone›] 74 ={"Timestamp":1670216975458317723,"EventType":"set_zone_config","Statement":"ALTER RANGE ‹system› CONFIGURE ZONE USING ‹num_replicas› = ‹1›","Tag":"CONFIGURE ZONE","User":"root","DescriptorID":17,"ApplicationName":"$ internal-set-zone","Target":"‹RANGE system›","Options":["‹num_replicas = 1›"]}
+I221205 05:09:35.466167 847 1@util/log/event_log.go:32 ⋮ [n1,intExec=‹set-zone›] 75 ={"Timestamp":1670216975462479622,"EventType":"set_zone_config","Statement":"ALTER RANGE ‹liveness› CONFIGURE ZONE USING ‹num_replicas› = ‹1›","Tag":"CONFIGURE ZONE","User":"root","DescriptorID":22,"ApplicationName":"$ internal-set-zone","Target":"‹RANGE liveness›","Options":["‹num_replicas = 1›"]}
+I221205 05:09:35.474352 823 1@util/log/event_log.go:32 ⋮ [n1,intExec=‹set-zone›] 76 ={"Timestamp":1670216975469792050,"EventType":"set_zone_config","Statement":"ALTER TABLE ‹system›.public.‹replication_constraint_stats› CONFIGURE ZONE USING ‹num_replicas› = ‹1›","Tag":"CONFIGURE ZONE","User":"root","DescriptorID":25,"ApplicationName":"$ internal-set-zone","Target":"‹TABLE system.public.replication_constraint_stats›","Options":["‹num_replicas = 1›"]}
+I221205 05:09:35.483600 914 1@util/log/event_log.go:32 ⋮ [n1,intExec=‹set-zone›] 77 ={"Timestamp":1670216975478790901,"EventType":"set_zone_config","Statement":"ALTER TABLE ‹system›.public.‹replication_stats› CONFIGURE ZONE USING ‹num_replicas› = ‹1›","Tag":"CONFIGURE ZONE","User":"root","DescriptorID":27,"ApplicationName":"$ internal-set-zone","Target":"‹TABLE system.public.replication_stats›","Options":["‹num_replicas = 1›"]}
+I221205 05:09:35.492271 904 1@util/log/event_log.go:32 ⋮ [n1,intExec=‹set-zone›] 78 ={"Timestamp":1670216975487567867,"EventType":"set_zone_config","Statement":"ALTER TABLE ‹system›.public.‹tenant_usage› CONFIGURE ZONE USING ‹num_replicas› = ‹1›","Tag":"CONFIGURE ZONE","User":"root","DescriptorID":45,"ApplicationName":"$ internal-set-zone","Target":"‹TABLE system.public.tenant_usage›","Options":["‹num_replicas = 1›"]}
+I221205 05:09:35.492464 32 1@cli/initial_sql.go:49 ⋮ [n1] 79  Replication was disabled for this cluster.
+I221205 05:09:35.492464 32 1@cli/initial_sql.go:49 ⋮ [n1] 79 +When/if adding nodes in the future, update zone configurations to increase the replication factor.
+I221205 05:09:35.492488 32 1@server/server_sql.go:1360 ⋮ [n1] 80  serving sql connections
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81  node startup completed:
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +CockroachDB node starting at 2022-12-05 05:09:35.49250953 +0000 UTC (took 0.5s)
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +build:               CCL v22.1.10 @ 2022/10/27 19:46:05 (go1.17.11)
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +webui:               ‹http://localhost:8080›
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +sql:                 ‹postgresql://root@localhost:26257/defaultdb?sslmode=disable›
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +sql (JDBC):          ‹jdbc:postgresql://localhost:26257/defaultdb?sslmode=disable&user=root›
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +RPC client flags:    ‹cockroach <client cmd> --host=localhost:26257 --insecure›
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +logs:                ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs›
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +temp dir:            ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/cockroach-temp3775128177›
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +external I/O path:   ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/extern›
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +store[0]:            ‹path=/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data›
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +storage engine:      pebble
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +clusterID:           ‹0183e114-412f-42bb-8f90-770999054dc5›
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +status:              initialized new cluster
+I221205 05:09:35.492630 32 1@cli/start.go:1028 ⋮ [n1] 81 +nodeID:              1
+I221205 05:09:36.661547 215 1@gossip/pkg/gossip/gossip.go:1547 ⋮ [n1] 82  node has connected to cluster via gossip
+I221205 05:09:36.663543 215 kv/kvserver/pkg/kv/kvserver/stores.go:269 ⋮ [n1] 83  wrote 0 node addresses to persistent storage
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84  
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +    WAL         4   1.2 M       -   1.2 M       -       -       -       -   1.2 M       -       -       -     1.0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +      6         0     0 B       -     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +  total         0     0 B       -   1.2 M     0 B       0     0 B       0   1.2 M       0     0 B       0     1.0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +  flush         0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +compact         0     0 B     0 B       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +  ctype         0       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 + memtbl         4   3.8 M
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +zmemtbl         0     0 B
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +   ztbl         0     0 B
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 + bcache         0     0 B    0.0%  (score == hit-rate)
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 + tcache         0     0 B    0.0%  (score == hit-rate)
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 +  snaps         0       -       0  (score == earliest seq num)
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 + titers         0
+I221205 05:09:55.149861 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 84 + filter         -       -    0.0%  (score == utility)
+I221205 05:10:06.182976 1864 kv/kvserver/pkg/kv/kvserver/replica_consistency.go:267 ⋮ [n1,consistencyChecker,s1,r4/1:‹/System{/tsd-tse}›] 85  triggering stats recomputation to resolve delta of {ContainsEstimates:10888 LastUpdateNanos:1670217005450938717 IntentAge:0 GCBytesAge:0 LiveBytes:7841 LiveCount:-1361 KeyBytes:-72458 KeyCount:-1361 ValBytes:80299 ValCount:-1361 IntentBytes:0 IntentCount:0 SeparatedIntentCount:0 SysBytes:0 SysCount:0 AbortSpanBytes:0}
+I221205 05:11:13.849433 2846 sql/table.go:182 ⋮ [n1,client=127.0.0.1:34128,user=root] 86  queued new schema-change job 819680620869779457 for table 107, mutation 0
+I221205 05:11:13.849915 2846 sql/table.go:182 ⋮ [n1,client=127.0.0.1:34128,user=root] 87  queued new schema-change job 819680620871385089 for table 106, mutation 1
+I221205 05:11:13.857963 2970 jobs/adopt.go:241 ⋮ [n1,client=127.0.0.1:34128,user=root] 88  job 819680620871385089: resuming execution
+I221205 05:11:13.857969 2969 jobs/adopt.go:241 ⋮ [n1,client=127.0.0.1:34128,user=root] 89  job 819680620869779457: resuming execution
+I221205 05:11:13.872627 2849 jobs/registry.go:1205 ⋮ [n1] 90  SCHEMA CHANGE job 819680620869779457: stepping through state running with error: <nil>
+I221205 05:11:13.872792 2974 jobs/registry.go:1205 ⋮ [n1] 91  SCHEMA CHANGE job 819680620871385089: stepping through state running with error: <nil>
+I221205 05:11:13.879600 2974 sql/schema_changer.go:729 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 92  schema change on ‹"batch"› (v2) starting execution...
+I221205 05:11:13.879693 2849 sql/schema_changer.go:729 ⋮ [n1,job=819680620869779457,scExec,id=107] 93  schema change on ‹"product"› (v2) starting execution...
+I221205 05:11:13.880228 2849 sql/schema_changer.go:1382 ⋮ [n1,job=819680620869779457,scExec,id=107] 94  waiting for a single version...
+I221205 05:11:13.882402 2849 sql/schema_changer.go:1388 ⋮ [n1,job=819680620869779457,scExec,id=107] 95  waiting for a single version... done (at v 2), took 2.173505ms
+I221205 05:11:13.882443 2849 jobs/registry.go:1205 ⋮ [n1] 96  SCHEMA CHANGE job 819680620869779457: stepping through state succeeded with error: <nil>
+I221205 05:11:13.884764 2974 sql/schema_changer.go:1161 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 97  stepping through state machine
+I221205 05:11:13.896287 2974 sql/schema_changer.go:1249 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 98  finished stepping through state machine
+I221205 05:11:13.906181 2974 sql/backfill.go:243 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 99  running backfill for ‹"batch"›, v=3
+I221205 05:11:13.906230 2974 sql/backfill.go:542 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 100  adding 1 constraints
+I221205 05:11:13.916966 2974 sql/backfill.go:665 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 101  finished adding constraints
+I221205 05:11:13.917001 2974 sql/backfill.go:680 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 102  validating 1 new constraints
+I221205 05:11:13.922788 3038 sql/check.go:291 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 103  validating FK ‹"batch_product_id_fkey"› (‹"batch"› [[‹product_id› ‹batch_id›]] -> ‹"product"› [[‹product_id›]]) with query ‹"SELECT s.product_id, s.batch_id FROM \n\t\t  (SELECT product_id, batch_id FROM [106 AS src]@{IGNORE_FOREIGN_KEYS} WHERE product_id IS NOT NULL) AS s\n\t\t\tLEFT OUTER JOIN\n\t\t\t[107 AS target] AS t\n\t\t\tON s.product_id = t.product_id\n\t\t WHERE t.product_id IS NULL  LIMIT 1"›
+I221205 05:11:13.933305 2974 sql/backfill.go:776 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 104  finished validating new constraints
+I221205 05:11:13.933340 2974 sql/backfill.go:363 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 105  completed backfill for ‹"batch"›, v=3
+I221205 05:11:13.933355 2974 sql/schema_changer.go:1970 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 106  marking schema change as complete
+I221205 05:11:13.940686 2974 sql/schema_changer.go:1382 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 107  waiting for a single version...
+I221205 05:11:13.942245 2974 sql/schema_changer.go:1388 ⋮ [n1,job=819680620871385089,scExec,id=106,mutation=1] 108  waiting for a single version... done (at v 5), took 1.559401ms
+I221205 05:11:13.942275 2974 jobs/registry.go:1205 ⋮ [n1] 109  SCHEMA CHANGE job 819680620871385089: stepping through state succeeded with error: <nil>
+I221205 05:11:13.948647 2846 jobs/wait.go:117 ⋮ [n1,client=127.0.0.1:34128,user=root] 110  waited for 2 [819680620869779457 819680620871385089] queued jobs to complete 90.710451ms
+I221205 05:11:20.274003 2960 kv/kvserver/pkg/kv/kvserver/replica_command.go:421 ⋮ [n1,split,s1,r44/1:‹/{Table/50-Max}›] 111  initiating a split of this range at key ‹/Table/106› [r45] (‹span config›)‹›
+I221205 05:11:20.283021 3181 kv/kvserver/pkg/kv/kvserver/replica_command.go:421 ⋮ [n1,split,s1,r45/1:‹/{Table/106-Max}›] 112  initiating a split of this range at key ‹/Table/107› [r46] (‹span config›)‹›
+I221205 05:11:24.365806 3256 sql/table.go:182 ⋮ [n1,client=127.0.0.1:32858,user=root] 113  queued new schema-change job 819680655329853441 for table 107, mutation 0
+I221205 05:11:24.366194 3256 sql/table.go:182 ⋮ [n1,client=127.0.0.1:32858,user=root] 114  queued new schema-change job 819680655331131393 for table 106, mutation 2
+I221205 05:11:24.372197 3277 jobs/adopt.go:241 ⋮ [n1,client=127.0.0.1:32858,user=root] 115  job 819680655331131393: resuming execution
+I221205 05:11:24.376319 3276 jobs/adopt.go:241 ⋮ [n1,client=127.0.0.1:32858,user=root] 116  job 819680655329853441: resuming execution
+I221205 05:11:24.383025 3199 sql/catalog/lease/descriptor_state.go:141 ⋮ [n1] 117  new lease: tabledesc.immutable: {ID: 107, Version: 4, ModificationTime: "1670217084.364688205,0", ParentID: 104, ParentSchemaID: 105, State: PUBLIC, NextColumnID: 9, Columns: [{ID: 1, TypeID: 2950, Null: false}, {ID: 2, TypeID: 25, Null: true}, {ID: 3, TypeID: 25, Null: true}, {ID: 4, TypeID: 25, Null: true}, {ID: 5, TypeID: 25, Null: false}, {ID: 6, TypeID: 20, Null: false}, {ID: 7, TypeID: 25, Null: false}, {ID: 8, TypeID: 25, Null: true}], NextFamilyID: 1, Families: [{ID: 0, Columns: [1, 2, 3, 4, 5, 6, 7, 8]}], PrimaryIndex: 1, NextIndexID: 4, Indexes: [{ID: 1, Unique: true, KeyColumns: [{ID: 1, Dir: ASC}], StoreColumns: [2, 3, 4, 5, 6, 7, 8]}, {ID: 2, Unique: true, KeyColumns: [{ID: 2, Dir: ASC}], KeySuffixColumns: [1]}, {ID: 3, Unique: true, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1]}], InboundFKs: [{OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}]}
+I221205 05:11:24.391376 3072 jobs/registry.go:1205 ⋮ [n1] 118  SCHEMA CHANGE job 819680655331131393: stepping through state running with error: <nil>
+I221205 05:11:24.391398 3282 jobs/registry.go:1205 ⋮ [n1] 119  SCHEMA CHANGE job 819680655329853441: stepping through state running with error: <nil>
+I221205 05:11:24.397593 3282 sql/schema_changer.go:729 ⋮ [n1,job=819680655329853441,scExec,id=107] 120  schema change on ‹"product"› (v4) starting execution...
+I221205 05:11:24.397596 3072 sql/schema_changer.go:729 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 121  schema change on ‹"batch"› (v6) starting execution...
+I221205 05:11:24.398227 3282 sql/schema_changer.go:1382 ⋮ [n1,job=819680655329853441,scExec,id=107] 122  waiting for a single version...
+I221205 05:11:24.400235 3282 sql/schema_changer.go:1388 ⋮ [n1,job=819680655329853441,scExec,id=107] 123  waiting for a single version... done (at v 4), took 2.007777ms
+I221205 05:11:24.400265 3282 jobs/registry.go:1205 ⋮ [n1] 124  SCHEMA CHANGE job 819680655329853441: stepping through state succeeded with error: <nil>
+I221205 05:11:24.403424 3072 sql/schema_changer.go:1161 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 125  stepping through state machine
+I221205 05:11:24.412977 3072 sql/schema_changer.go:1249 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 126  finished stepping through state machine
+I221205 05:11:24.420951 3072 sql/backfill.go:243 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 127  running backfill for ‹"batch"›, v=7
+I221205 05:11:24.421034 3072 sql/backfill.go:542 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 128  adding 1 constraints
+I221205 05:11:24.430382 3228 sql/catalog/lease/descriptor_state.go:141 ⋮ [n1] 129  new lease: tabledesc.immutable: {ID: 107, Version: 5, ModificationTime: "1670217084.421050286,0", ParentID: 104, ParentSchemaID: 105, State: PUBLIC, NextColumnID: 9, Columns: [{ID: 1, TypeID: 2950, Null: false}, {ID: 2, TypeID: 25, Null: true}, {ID: 3, TypeID: 25, Null: true}, {ID: 4, TypeID: 25, Null: true}, {ID: 5, TypeID: 25, Null: false}, {ID: 6, TypeID: 20, Null: false}, {ID: 7, TypeID: 25, Null: false}, {ID: 8, TypeID: 25, Null: true}], NextFamilyID: 1, Families: [{ID: 0, Columns: [1, 2, 3, 4, 5, 6, 7, 8]}], PrimaryIndex: 1, NextIndexID: 4, Indexes: [{ID: 1, Unique: true, KeyColumns: [{ID: 1, Dir: ASC}], StoreColumns: [2, 3, 4, 5, 6, 7, 8]}, {ID: 2, Unique: true, KeyColumns: [{ID: 2, Dir: ASC}], KeySuffixColumns: [1]}, {ID: 3, Unique: true, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1]}], InboundFKs: [{OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}, {OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}]}
+I221205 05:11:24.430593 3072 sql/catalog/lease/lease.go:146 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 130  waiting for 1 leases to expire: desc=[{‹product› 107 4}]
+I221205 05:11:24.433727 3072 sql/backfill.go:665 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 131  finished adding constraints
+I221205 05:11:24.433746 3072 sql/backfill.go:680 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 132  validating 1 new constraints
+I221205 05:11:24.438940 3294 sql/check.go:291 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 133  validating FK ‹"batch_product_id_fkey_1"› (‹"batch"› [[‹product_id› ‹batch_id›]] -> ‹"product"› [[‹product_id›]]) with query ‹"SELECT s.product_id, s.batch_id FROM \n\t\t  (SELECT product_id, batch_id FROM [106 AS src]@{IGNORE_FOREIGN_KEYS} WHERE product_id IS NOT NULL) AS s\n\t\t\tLEFT OUTER JOIN\n\t\t\t[107 AS target] AS t\n\t\t\tON s.product_id = t.product_id\n\t\t WHERE t.product_id IS NULL  LIMIT 1"›
+I221205 05:11:24.439863 3072 sql/backfill.go:776 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 134  finished validating new constraints
+I221205 05:11:24.439881 3072 sql/backfill.go:363 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 135  completed backfill for ‹"batch"›, v=7
+I221205 05:11:24.439891 3072 sql/schema_changer.go:1970 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 136  marking schema change as complete
+I221205 05:11:24.446793 3072 sql/schema_changer.go:1382 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 137  waiting for a single version...
+I221205 05:11:24.448634 3072 sql/schema_changer.go:1388 ⋮ [n1,job=819680655331131393,scExec,id=106,mutation=2] 138  waiting for a single version... done (at v 9), took 1.841862ms
+I221205 05:11:24.448672 3072 jobs/registry.go:1205 ⋮ [n1] 139  SCHEMA CHANGE job 819680655331131393: stepping through state succeeded with error: <nil>
+I221205 05:11:24.454656 3256 jobs/wait.go:117 ⋮ [n1,client=127.0.0.1:32858,user=root] 140  waited for 2 [819680655329853441 819680655331131393] queued jobs to complete 82.486555ms
+I221205 05:11:24.456194 3256 sql/table.go:182 ⋮ [n1,client=127.0.0.1:32858,user=root] 141  queued new schema-change job 819680655626043393 for table 107, mutation 1
+I221205 05:11:24.460367 3394 jobs/adopt.go:241 ⋮ [n1,client=127.0.0.1:32858,user=root] 142  job 819680655626043393: resuming execution
+I221205 05:11:24.473923 3382 sql/catalog/lease/descriptor_state.go:141 ⋮ [n1] 143  new lease: tabledesc.immutable: {ID: 107, Version: 6, ModificationTime: "1670217084.455050253,0", ParentID: 104, ParentSchemaID: 105, State: PUBLIC, NextColumnID: 9, Columns: [{ID: 1, TypeID: 2950, Null: false}, {ID: 2, TypeID: 25, Null: true}, {ID: 3, TypeID: 25, Null: true}, {ID: 4, TypeID: 25, Null: true}, {ID: 5, TypeID: 25, Null: false}, {ID: 6, TypeID: 20, Null: false}, {ID: 7, TypeID: 25, Null: false}, {ID: 8, TypeID: 25, Null: true}], NextFamilyID: 1, Families: [{ID: 0, Columns: [1, 2, 3, 4, 5, 6, 7, 8]}], MutationJobs: [{MutationID: 1, JobID: 819680655626043393}], Mutations: [{MutationID: 1, Direction: ADD, State: BACKFILLING, Index: {ID: 4, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: ADD, MutationID: 1}}, {MutationID: 1, Direction: ADD, State: DELETE_ONLY, Index: {ID: 5, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: ADD, MutationID: 1}}], PrimaryIndex: 1, NextIndexID: 6, Indexes: [{ID: 1, Unique: true, KeyColumns: [{ID: 1, Dir: ASC}], StoreColumns: [2, 3, 4, 5, 6, 7, 8]}, {ID: 2, Unique: true, KeyColumns: [{ID: 2, Dir: ASC}], KeySuffixColumns: [1]}, {ID: 3, Unique: true, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1]}], InboundFKs: [{OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}, {OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}]}
+I221205 05:11:24.478126 3335 jobs/registry.go:1205 ⋮ [n1] 144  SCHEMA CHANGE job 819680655626043393: stepping through state running with error: <nil>
+I221205 05:11:24.484412 3335 sql/schema_changer.go:729 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 145  schema change on ‹"product"› (v6) starting execution...
+I221205 05:11:24.489783 3335 sql/schema_changer.go:1161 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 146  stepping through state machine
+I221205 05:11:24.500116 3335 sql/catalog/lease/lease.go:146 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 147  waiting for 1 leases to expire: desc=[{‹product› 107 6}]
+I221205 05:11:24.501651 3349 sql/catalog/lease/descriptor_state.go:141 ⋮ [n1] 148  new lease: tabledesc.immutable: {ID: 107, Version: 7, ModificationTime: "1670217084.489803081,0", ParentID: 104, ParentSchemaID: 105, State: PUBLIC, NextColumnID: 9, Columns: [{ID: 1, TypeID: 2950, Null: false}, {ID: 2, TypeID: 25, Null: true}, {ID: 3, TypeID: 25, Null: true}, {ID: 4, TypeID: 25, Null: true}, {ID: 5, TypeID: 25, Null: false}, {ID: 6, TypeID: 20, Null: false}, {ID: 7, TypeID: 25, Null: false}, {ID: 8, TypeID: 25, Null: true}], NextFamilyID: 1, Families: [{ID: 0, Columns: [1, 2, 3, 4, 5, 6, 7, 8]}], MutationJobs: [{MutationID: 1, JobID: 819680655626043393}], Mutations: [{MutationID: 1, Direction: ADD, State: BACKFILLING, Index: {ID: 4, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: ADD, MutationID: 1}}, {MutationID: 1, Direction: ADD, State: DELETE_AND_WRITE_ONLY, Index: {ID: 5, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: ADD, MutationID: 1}}], PrimaryIndex: 1, NextIndexID: 6, Indexes: [{ID: 1, Unique: true, KeyColumns: [{ID: 1, Dir: ASC}], StoreColumns: [2, 3, 4, 5, 6, 7, 8]}, {ID: 2, Unique: true, KeyColumns: [{ID: 2, Dir: ASC}], KeySuffixColumns: [1]}, {ID: 3, Unique: true, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1]}], InboundFKs: [{OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}, {OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}]}
+I221205 05:11:24.506677 3335 sql/schema_changer.go:1249 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 149  finished stepping through state machine
+I221205 05:11:24.511006 3335 sql/backfill.go:243 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 150  running backfill for ‹"product"›, v=7
+I221205 05:11:24.511206 3335 sql/backfill.go:2008 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 151  backfilling 1 indexes: [‹/Table/107/{4-5}›] (writeAtRequestTimestamp: true)
+I221205 05:11:24.511303 3335 kv/kvserver/pkg/kv/kvserver/replica_command.go:421 ⋮ [n1,s1,r46/1:‹/{Table/107-Max}›] 152  initiating a split of this range at key ‹/Table/107/4› [r47] (‹manual›)‹›
+I221205 05:11:24.523827 3335 sql/backfill.go:920 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 153  starting scan of target index as of 1670217084.523825335,0...
+I221205 05:11:24.524033 3335 sql/backfill.go:945 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 154  persisting target safe write time 1670217084.523825335,0...
+I221205 05:11:24.536666 3335 sql/schema_changer.go:1263 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 155  stepping through state machine after index backfill
+I221205 05:11:24.536707 3335 sql/schema_changer.go:1275 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 156  stepping through state machine
+I221205 05:11:24.545106 3335 sql/catalog/lease/lease.go:146 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 157  waiting for 1 leases to expire: desc=[{‹product› 107 7}]
+I221205 05:11:24.546495 3364 sql/catalog/lease/descriptor_state.go:141 ⋮ [n1] 158  new lease: tabledesc.immutable: {ID: 107, Version: 8, ModificationTime: "1670217084.536720067,0", ParentID: 104, ParentSchemaID: 105, State: PUBLIC, NextColumnID: 9, Columns: [{ID: 1, TypeID: 2950, Null: false}, {ID: 2, TypeID: 25, Null: true}, {ID: 3, TypeID: 25, Null: true}, {ID: 4, TypeID: 25, Null: true}, {ID: 5, TypeID: 25, Null: false}, {ID: 6, TypeID: 20, Null: false}, {ID: 7, TypeID: 25, Null: false}, {ID: 8, TypeID: 25, Null: true}], NextFamilyID: 1, Families: [{ID: 0, Columns: [1, 2, 3, 4, 5, 6, 7, 8]}], MutationJobs: [{MutationID: 1, JobID: 819680655626043393}], Mutations: [{MutationID: 1, Direction: ADD, State: DELETE_ONLY, Index: {ID: 4, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: ADD, MutationID: 1}}, {MutationID: 1, Direction: ADD, State: DELETE_AND_WRITE_ONLY, Index: {ID: 5, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: ADD, MutationID: 1}}], PrimaryIndex: 1, NextIndexID: 6, Indexes: [{ID: 1, Unique: true, KeyColumns: [{ID: 1, Dir: ASC}], StoreColumns: [2, 3, 4, 5, 6, 7, 8]}, {ID: 2, Unique: true, KeyColumns: [{ID: 2, Dir: ASC}], KeySuffixColumns: [1]}, {ID: 3, Unique: true, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1]}], InboundFKs: [{OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}, {OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}]}
+I221205 05:11:24.551784 3335 sql/schema_changer.go:1275 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 159  stepping through state machine
+I221205 05:11:24.559599 3335 sql/catalog/lease/lease.go:146 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 160  waiting for 1 leases to expire: desc=[{‹product› 107 8}]
+I221205 05:11:24.561536 3367 sql/catalog/lease/descriptor_state.go:141 ⋮ [n1] 161  new lease: tabledesc.immutable: {ID: 107, Version: 9, ModificationTime: "1670217084.551803407,0", ParentID: 104, ParentSchemaID: 105, State: PUBLIC, NextColumnID: 9, Columns: [{ID: 1, TypeID: 2950, Null: false}, {ID: 2, TypeID: 25, Null: true}, {ID: 3, TypeID: 25, Null: true}, {ID: 4, TypeID: 25, Null: true}, {ID: 5, TypeID: 25, Null: false}, {ID: 6, TypeID: 20, Null: false}, {ID: 7, TypeID: 25, Null: false}, {ID: 8, TypeID: 25, Null: true}], NextFamilyID: 1, Families: [{ID: 0, Columns: [1, 2, 3, 4, 5, 6, 7, 8]}], MutationJobs: [{MutationID: 1, JobID: 819680655626043393}], Mutations: [{MutationID: 1, Direction: ADD, State: MERGING, Index: {ID: 4, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: ADD, MutationID: 1}}, {MutationID: 1, Direction: ADD, State: DELETE_AND_WRITE_ONLY, Index: {ID: 5, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: ADD, MutationID: 1}}], PrimaryIndex: 1, NextIndexID: 6, Indexes: [{ID: 1, Unique: true, KeyColumns: [{ID: 1, Dir: ASC}], StoreColumns: [2, 3, 4, 5, 6, 7, 8]}, {ID: 2, Unique: true, KeyColumns: [{ID: 2, Dir: ASC}], KeySuffixColumns: [1]}, {ID: 3, Unique: true, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1]}], InboundFKs: [{OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}, {OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}]}
+I221205 05:11:24.567008 3335 sql/schema_changer.go:1270 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 162  finished stepping through state machine
+I221205 05:11:24.567598 3335 sql/backfill.go:2724 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 163  merging all keys in temporary index before time 1670217084.567596885,0
+I221205 05:11:24.576916 3335 sql/backfill.go:2127 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 164  dropping temporary index: 5
+I221205 05:11:24.584483 3335 sql/catalog/lease/lease.go:146 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 165  waiting for 1 leases to expire: desc=[{‹product› 107 9}]
+I221205 05:11:24.586624 3420 sql/catalog/lease/descriptor_state.go:141 ⋮ [n1] 166  new lease: tabledesc.immutable: {ID: 107, Version: 10, ModificationTime: "1670217084.576118467,0", ParentID: 104, ParentSchemaID: 105, State: PUBLIC, NextColumnID: 9, Columns: [{ID: 1, TypeID: 2950, Null: false}, {ID: 2, TypeID: 25, Null: true}, {ID: 3, TypeID: 25, Null: true}, {ID: 4, TypeID: 25, Null: true}, {ID: 5, TypeID: 25, Null: false}, {ID: 6, TypeID: 20, Null: false}, {ID: 7, TypeID: 25, Null: false}, {ID: 8, TypeID: 25, Null: true}], NextFamilyID: 1, Families: [{ID: 0, Columns: [1, 2, 3, 4, 5, 6, 7, 8]}], MutationJobs: [{MutationID: 1, JobID: 819680655626043393}], Mutations: [{MutationID: 1, Direction: ADD, State: DELETE_AND_WRITE_ONLY, Index: {ID: 4, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: ADD, MutationID: 1}}, {MutationID: 1, Direction: DROP, State: DELETE_ONLY, Index: {ID: 5, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1], State: DROP, MutationID: 1}}], PrimaryIndex: 1, NextIndexID: 6, Indexes: [{ID: 1, Unique: true, KeyColumns: [{ID: 1, Dir: ASC}], StoreColumns: [2, 3, 4, 5, 6, 7, 8]}, {ID: 2, Unique: true, KeyColumns: [{ID: 2, Dir: ASC}], KeySuffixColumns: [1]}, {ID: 3, Unique: true, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1]}], InboundFKs: [{OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}, {OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}]}
+I221205 05:11:24.591573 3335 sql/backfill.go:2072 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 167  finished backfilling indexes
+I221205 05:11:24.591598 3335 sql/backfill.go:1382 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 168  validating new indexes
+I221205 05:11:24.597193 3425 sql/backfill.go:1700 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 169  validation: index ‹product›/‹product_name_asc› row count = 0, time so far 1.184484ms
+I221205 05:11:24.597204 3538 sql/backfill.go:1739 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 170  validation: table ‹product› row count = 0, took 1.202261ms
+I221205 05:11:24.597251 3335 sql/backfill.go:1463 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 171  finished validating new indexes
+I221205 05:11:24.597265 3335 sql/backfill.go:363 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 172  completed backfill for ‹"product"›, v=7
+I221205 05:11:24.597277 3335 sql/schema_changer.go:1970 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 173  marking schema change as complete
+I221205 05:11:24.598761 3335 sql/schema_changer.go:1364 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 174  created index GC job 819680656090365953
+I221205 05:11:24.598880 3540 jobs/adopt.go:241 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 175  job 819680656090365953: resuming execution
+I221205 05:11:24.608080 3528 jobs/registry.go:1205 ⋮ [n1] 176  SCHEMA CHANGE GC job 819680656090365953: stepping through state running with error: <nil>
+I221205 05:11:24.613808 3335 sql/catalog/lease/lease.go:146 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 177  waiting for 1 leases to expire: desc=[{‹product› 107 10}]
+I221205 05:11:24.616567 3485 sql/catalog/lease/descriptor_state.go:141 ⋮ [n1] 178  new lease: tabledesc.immutable: {ID: 107, Version: 11, ModificationTime: "1670217084.597285632,0", ParentID: 104, ParentSchemaID: 105, State: PUBLIC, NextColumnID: 9, Columns: [{ID: 1, TypeID: 2950, Null: false}, {ID: 2, TypeID: 25, Null: true}, {ID: 3, TypeID: 25, Null: true}, {ID: 4, TypeID: 25, Null: true}, {ID: 5, TypeID: 25, Null: false}, {ID: 6, TypeID: 20, Null: false}, {ID: 7, TypeID: 25, Null: false}, {ID: 8, TypeID: 25, Null: true}], NextFamilyID: 1, Families: [{ID: 0, Columns: [1, 2, 3, 4, 5, 6, 7, 8]}], PrimaryIndex: 1, NextIndexID: 6, Indexes: [{ID: 1, Unique: true, KeyColumns: [{ID: 1, Dir: ASC}], StoreColumns: [2, 3, 4, 5, 6, 7, 8]}, {ID: 2, Unique: true, KeyColumns: [{ID: 2, Dir: ASC}], KeySuffixColumns: [1]}, {ID: 3, Unique: true, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1]}, {ID: 4, Unique: false, KeyColumns: [{ID: 3, Dir: ASC}], KeySuffixColumns: [1]}], InboundFKs: [{OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}, {OriginTableID: 106, OriginColumns: [4], ReferencedTableID: 107, ReferencedColumnIDs: [1], Validity: Validating}]}
+I221205 05:11:24.621422 3335 sql/schema_changer.go:1382 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 179  waiting for a single version...
+I221205 05:11:24.622911 3335 sql/schema_changer.go:1388 ⋮ [n1,job=819680655626043393,scExec,id=107,mutation=1] 180  waiting for a single version... done (at v 11), took 1.488964ms
+I221205 05:11:24.622942 3335 jobs/registry.go:1205 ⋮ [n1] 181  SCHEMA CHANGE job 819680655626043393: stepping through state succeeded with error: <nil>
+I221205 05:11:24.623390 3528 sql/gcjob/gc_job_utils.go:266 ⋮ [n1,job=819680656090365953] 182  updated progress payload: ‹indexes:<index_id:5 > ranges_unsplit_done:true›
+I221205 05:11:24.625636 3528 sql/gcjob/gc_job_utils.go:273 ⋮ [n1,job=819680656090365953] 183  updated running status: ‹waiting for GC TTL›
+I221205 05:11:24.628444 3256 jobs/wait.go:117 ⋮ [n1,client=127.0.0.1:32858,user=root] 184  waited for 1 [819680655626043393] queued jobs to complete 168.100464ms
+I221205 05:11:24.634151 3528 sql/gcjob/gc_job_utils.go:266 ⋮ [n1,job=819680656090365953] 185  updated progress payload: ‹indexes:<index_id:5 status:DELETING > ranges_unsplit_done:true›
+I221205 05:11:24.636306 3528 sql/gcjob/gc_job_utils.go:273 ⋮ [n1,job=819680656090365953] 186  updated running status: ‹waiting for GC TTL›
+I221205 05:11:24.642391 3528 sql/gcjob/gc_job_utils.go:266 ⋮ [n1,job=819680656090365953] 187  updated progress payload: ‹indexes:<index_id:5 status:DELETING > ranges_unsplit_done:true›
+I221205 05:11:24.644770 3528 sql/gcjob/gc_job_utils.go:273 ⋮ [n1,job=819680656090365953] 188  updated running status: ‹performing garbage collection on index 5›
+I221205 05:11:24.647125 3528 sql/schema_changer.go:1382 ⋮ [n1,job=819680656090365953] 189  waiting for a single version...
+I221205 05:11:24.649201 3528 sql/schema_changer.go:1388 ⋮ [n1,job=819680656090365953] 190  waiting for a single version... done (at v 11), took 2.076664ms
+I221205 05:11:24.649222 3528 sql/gcjob/index_garbage_collection.go:105 ⋮ [n1,job=819680656090365953] 191  clearing index 5 from table 107
+I221205 05:11:25.153224 3528 sql/gcjob/gc_job_utils.go:54 ⋮ [n1,job=819680656090365953] 192  marked index 5 as GC'd
+I221205 05:11:25.158370 3528 sql/gcjob/gc_job_utils.go:266 ⋮ [n1,job=819680656090365953] 193  updated progress payload: ‹indexes:<index_id:5 status:DELETED > ranges_unsplit_done:true›
+I221205 05:11:25.162585 3528 sql/gcjob/gc_job_utils.go:273 ⋮ [n1,job=819680656090365953] 194  updated running status: ‹waiting for GC TTL›
+I221205 05:11:25.164955 3528 jobs/registry.go:1205 ⋮ [n1] 195  SCHEMA CHANGE GC job 819680656090365953: stepping through state succeeded with error: <nil>
+W221205 05:12:27.218460 864 2@rpc/pkg/rpc/clock_offset.go:216 ⋮ [n1,rnode=1,raddr=‹localhost:26257›,class=default,heartbeat] 196  latency jump (prev avg 0.64ms, current 1.06ms)
+I221205 05:12:35.285679 4635 jobs/registry.go:1205 ⋮ [n1] 197  AUTO CREATE STATS job 819680887692197889: stepping through state running with error: <nil>
+I221205 05:12:35.334661 4635 jobs/registry.go:1205 ⋮ [n1] 198  AUTO CREATE STATS job 819680887692197889: stepping through state succeeded with error: <nil>
+I221205 05:12:35.349766 4839 jobs/registry.go:1205 ⋮ [n1] 199  AUTO CREATE STATS job 819680887904043009: stepping through state running with error: <nil>
+I221205 05:12:35.386589 4839 jobs/registry.go:1205 ⋮ [n1] 200  AUTO CREATE STATS job 819680887904043009: stepping through state succeeded with error: <nil>
+I221205 05:19:35.106224 122 util/admission/work_queue.go:475 ⋮ [n1] 201  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:19:35.106145 124 util/admission/work_queue.go:475 ⋮ [n1] 202  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+E221205 05:19:35.151965 58 kv/kvserver/pkg/kv/kvserver/queue.go:1221 ⋮ [n1,replicate] 203  24 replicas failing with ‹"0 of 1 live stores are able to take a new replica for the range (1 already has a voter, 0 already have a non-voter); likely not enough nodes in cluster"›
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204  
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +    WAL         8    28 M       -    28 M       -       -       -       -    28 M       -       -       -     1.0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +      6         0     0 B       -     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +  total         0     0 B       -    28 M     0 B       0     0 B       0    28 M       0     0 B       0     1.0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +  flush         0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +compact         0     0 B     0 B       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +  ctype         0       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 + memtbl         8    64 M
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +zmemtbl         0     0 B
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +   ztbl         0     0 B
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 + bcache         0     0 B    0.0%  (score == hit-rate)
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 + tcache         0     0 B    0.0%  (score == hit-rate)
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 +  snaps         0       -       0  (score == earliest seq num)
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 + titers         0
+I221205 05:19:55.150523 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 204 + filter         -       -    0.0%  (score == utility)
+I221205 05:20:40.000171 520 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 205  flushing 183 stmt/txn fingerprints (788480 bytes) after 6.969µs
+I221205 05:24:35.205058 122 util/admission/work_queue.go:475 ⋮ [n1] 206  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:24:35.305996 344 util/admission/work_queue.go:475 ⋮ [-] 207  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+E221205 05:29:35.151941 58 kv/kvserver/pkg/kv/kvserver/queue.go:1221 ⋮ [n1,replicate] 208  24 replicas failing with ‹"0 of 1 live stores are able to take a new replica for the range (1 already has a voter, 0 already have a non-voter); likely not enough nodes in cluster"›
+I221205 05:29:35.305880 122 util/admission/work_queue.go:475 ⋮ [n1] 209  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:29:35.305964 124 util/admission/work_queue.go:475 ⋮ [n1] 210  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:29:35.405686 344 util/admission/work_queue.go:475 ⋮ [-] 211  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:29:49.401723 520 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 212  flushing 30 stmt/txn fingerprints (235520 bytes) after 3.548µs
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213  
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +    WAL         8    56 M       -    56 M       -       -       -       -    56 M       -       -       -     1.0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +      6         0     0 B       -     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +  total         0     0 B       -    56 M     0 B       0     0 B       0    56 M       0     0 B       0     1.0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +  flush         0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +compact         0     0 B     0 B       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +  ctype         0       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 + memtbl         8    64 M
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +zmemtbl         0     0 B
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +   ztbl         0     0 B
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 + bcache         0     0 B    0.0%  (score == hit-rate)
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 + tcache         0     0 B    0.0%  (score == hit-rate)
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 +  snaps         0       -       0  (score == earliest seq num)
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 + titers         0
+I221205 05:29:55.150894 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 213 + filter         -       -    0.0%  (score == utility)
+I221205 05:34:35.405624 122 util/admission/work_queue.go:475 ⋮ [n1] 214  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:34:35.505952 344 util/admission/work_queue.go:475 ⋮ [-] 215  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:38:30.825254 520 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 216  flushing 25 stmt/txn fingerprints (204800 bytes) after 2.292µs
+E221205 05:39:35.151825 58 kv/kvserver/pkg/kv/kvserver/queue.go:1221 ⋮ [n1,replicate] 217  24 replicas failing with ‹"0 of 1 live stores are able to take a new replica for the range (1 already has a voter, 0 already have a non-voter); likely not enough nodes in cluster"›
+I221205 05:39:35.268939 518 sql/temporary_schema.go:514 ⋮ [n1] 218  running temporary object cleanup background job
+I221205 05:39:35.270325 518 sql/temporary_schema.go:559 ⋮ [n1] 219  found 0 temporary schemas
+I221205 05:39:35.270335 518 sql/temporary_schema.go:562 ⋮ [n1] 220  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 05:39:35.270756 518 sql/temporary_schema.go:563 ⋮ [n1] 221  completed temporary object cleanup job
+I221205 05:39:35.270763 518 sql/temporary_schema.go:646 ⋮ [n1] 222  temporary object cleaner next scheduled to run at 2022-12-05 06:09:35.265998534 +0000 UTC
+I221205 05:39:35.506066 344 util/admission/work_queue.go:475 ⋮ [-] 223  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:39:35.506055 122 util/admission/work_queue.go:475 ⋮ [n1] 225  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:39:35.506063 124 util/admission/work_queue.go:475 ⋮ [n1] 224  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226  
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +    WAL         1    26 M       -    82 M       -       -       -       -    82 M       -       -       -     1.0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +      0         0     0 B    0.00    56 M     0 B       0     0 B       0   595 K       1     0 B       0     0.0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +      6         1   595 K       -     0 B     0 B       0   595 K       1     0 B       0     0 B       1     0.0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +  total         1   595 K       -    82 M     0 B       0   595 K       1    83 M       1     0 B       1     1.0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +  flush         1
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +compact         1     0 B     0 B       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +  ctype         0       0       0       1       0       0  (default, delete, elision, move, read, rewrite)
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 + memtbl         1    64 M
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +zmemtbl         0     0 B
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +   ztbl         0     0 B
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 + bcache        34   1.2 M   99.8%  (score == hit-rate)
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 +  snaps         0       -       0  (score == earliest seq num)
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 + titers         0
+I221205 05:39:55.150717 80 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 226 + filter         -       -    0.0%  (score == utility)
+I221205 05:44:35.605925 344 util/admission/work_queue.go:475 ⋮ [-] 227  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 05:44:35.605926 122 util/admission/work_queue.go:475 ⋮ [n1] 228  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+W221205 05:46:48.766630 346 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 229  slow heartbeat took 1.600985978s; err=<nil>
+I221205 05:46:48.663518 275 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 230  raft ready handling: 0.51s [append=0.10s, apply=0.30s, commit-batch-sync=0.01s, other=0.10s], wrote 280 B sync [append-ent=132 B (2), apply=132 B (2)]; node might be overloaded
+W221205 05:47:00.334457 864 2@rpc/pkg/rpc/clock_offset.go:216 ⋮ [n1,rnode=1,raddr=‹localhost:26257›,class=default,heartbeat] 231  latency jump (prev avg 130.13ms, current 373.63ms)
+W221205 05:47:01.853538 346 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 232  slow heartbeat took 1.158389849s; err=<nil>
+I221205 05:47:03.183693 249 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r35/1:‹/Table/{39-40}›,raft] 233  raft ready handling: 0.98s [append=0.08s, apply=0.46s, commit-batch-sync=0.05s, other=0.39s], wrote 351 B sync [append-ent=250 B (1), apply=250 B (1)]; node might be overloaded
+I221205 05:47:04.844650 251 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r35/1:‹/Table/{39-40}›,raft] 234  raft ready handling: 0.56s [append=0.13s, apply=0.09s, commit-batch-sync=0.07s, other=0.27s], wrote 339 B sync [append-ent=238 B (1), apply=238 B (1)]; node might be overloaded
+I221205 05:47:06.880243 238 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›,raft] 235  raft ready handling: 0.53s [append=0.00s, apply=0.37s, commit-batch-sync=0.10s, other=0.06s], wrote 159 KiB sync [append-ent=159 KiB (1), apply=159 KiB (1)]; node might be overloaded
+I221205 05:47:07.419564 244 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 236  raft ready handling: 1.08s [append=0.00s, apply=0.94s, commit-batch-sync=0.08s, other=0.06s], wrote 223 B sync [append-ent=123 B (1), apply=123 B (1)]; node might be overloaded
+W221205 05:47:07.565373 346 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 237  slow heartbeat took 2.390294269s; err=<nil>
+I221205 05:47:07.630591 242 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›,raft] 238  raft ready handling: 0.78s [append=0.22s, apply=0.12s, commit-batch-sync=0.06s, other=0.37s], wrote 60 KiB sync [append-ent=60 KiB (1), apply=60 KiB (1)]; node might be overloaded
+I221205 05:47:08.954977 239 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›,raft] 239  raft ready handling: 0.75s [append=0.04s, apply=0.52s, commit-batch-sync=0.11s, other=0.08s], wrote 174 B sync [append-ent=76 B (1), apply=76 B (1)]; node might be overloaded
+I221205 05:47:09.782287 253 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r7/1:‹/Table/1{1-2}›,raft] 240  raft ready handling: 0.59s [append=0.08s, apply=0.16s, commit-batch-sync=0.15s, other=0.20s], wrote 594 B sync [append-ent=442 B (2), apply=442 B (2)]; node might be overloaded

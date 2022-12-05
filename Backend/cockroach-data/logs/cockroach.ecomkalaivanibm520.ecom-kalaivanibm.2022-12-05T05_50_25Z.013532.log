@@ -1,0 +1,1164 @@
+I221205 05:50:25.091413 1 util/log/file_sync_buffer.go:238 ⋮ [config]   file created at: 2022/12/05 05:50:25
+I221205 05:50:25.091420 1 util/log/file_sync_buffer.go:238 ⋮ [config]   running on machine: ‹ecomkalaivanibm520›
+I221205 05:50:25.091426 1 util/log/file_sync_buffer.go:238 ⋮ [config]   binary: CockroachDB CCL v22.1.10 (x86_64-pc-linux-gnu, built 2022/10/27 19:46:05, go1.17.11)
+I221205 05:50:25.091431 1 util/log/file_sync_buffer.go:238 ⋮ [config]   arguments: [‹cockroach› ‹start-single-node› ‹--listen-addr=localhost:26257› ‹--http-addr=localhost:8080› ‹--insecure›]
+I221205 05:50:25.091437 1 util/log/file_sync_buffer.go:238 ⋮ [config]   log format (utf8=✓): crdb-v2
+I221205 05:50:25.091440 1 util/log/file_sync_buffer.go:238 ⋮ [config]   line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid [chan@]file:line redactionmark \[tags\] [counter] msg
+W221205 05:50:25.091314 1 1@cli/start.go:1181 ⋮ [n?] 1  ALL SECURITY CONTROLS HAVE BEEN DISABLED!
+W221205 05:50:25.091314 1 1@cli/start.go:1181 ⋮ [n?] 1 +
+W221205 05:50:25.091314 1 1@cli/start.go:1181 ⋮ [n?] 1 +This mode is intended for non-production testing only.
+W221205 05:50:25.091314 1 1@cli/start.go:1181 ⋮ [n?] 1 +
+W221205 05:50:25.091314 1 1@cli/start.go:1181 ⋮ [n?] 1 +In this mode:
+W221205 05:50:25.091314 1 1@cli/start.go:1181 ⋮ [n?] 1 +- Your cluster is open to any client that can access ‹localhost›.
+W221205 05:50:25.091314 1 1@cli/start.go:1181 ⋮ [n?] 1 +- Intruders with access to your machine or network can observe client-server traffic.
+W221205 05:50:25.091314 1 1@cli/start.go:1181 ⋮ [n?] 1 +- Intruders can log in without password and read or write any data in the cluster.
+W221205 05:50:25.091314 1 1@cli/start.go:1181 ⋮ [n?] 1 +- Intruders can consume all your server's resources and cause unavailability.
+I221205 05:50:25.091719 1 1@cli/start.go:1191 ⋮ [n?] 2  To start a secure server without mandating TLS for clients,
+I221205 05:50:25.091719 1 1@cli/start.go:1191 ⋮ [n?] 2 +consider --accept-sql-without-tls instead. For other options, see:
+I221205 05:50:25.091719 1 1@cli/start.go:1191 ⋮ [n?] 2 +
+I221205 05:50:25.091719 1 1@cli/start.go:1191 ⋮ [n?] 2 +- ‹https://go.crdb.dev/issue-v/53404/v22.1›
+I221205 05:50:25.091719 1 1@cli/start.go:1191 ⋮ [n?] 2 +- https://www.cockroachlabs.com/docs/v22.1/secure-a-cluster.html
+I221205 05:50:25.091910 1 server/status/recorder.go:620 ⋮ [n?] 3  ‹available memory from cgroups (8.0 EiB) is unsupported, using system memory 15 GiB instead:›
+W221205 05:50:25.091922 1 1@cli/start.go:1107 ⋮ [n?] 4  ‹Using the default setting for --cache (128 MiB).›
+W221205 05:50:25.091922 1 1@cli/start.go:1107 ⋮ [n?] 4 +‹  A significantly larger value is usually needed for good performance.›
+W221205 05:50:25.091922 1 1@cli/start.go:1107 ⋮ [n?] 4 +‹  If you have a dedicated server a reasonable setting is --cache=.25 (3.8 GiB).›
+I221205 05:50:25.092009 1 server/status/recorder.go:620 ⋮ [n?] 5  ‹available memory from cgroups (8.0 EiB) is unsupported, using system memory 15 GiB instead:›
+I221205 05:50:25.092014 1 1@cli/start.go:1220 ⋮ [n?] 6  ‹CockroachDB CCL v22.1.10 (x86_64-pc-linux-gnu, built 2022/10/27 19:46:05, go1.17.11)›
+I221205 05:50:25.093923 1 server/status/recorder.go:620 ⋮ [n?] 7  ‹available memory from cgroups (8.0 EiB) is unsupported, using system memory 15 GiB instead:›
+I221205 05:50:25.093941 1 server/config.go:487 ⋮ [n?] 8  system total memory: 15 GiB
+I221205 05:50:25.093952 1 server/config.go:489 ⋮ [n?] 9  server configuration:
+I221205 05:50:25.093952 1 server/config.go:489 ⋮ [n?] 9 +‹max offset             500000000›
+I221205 05:50:25.093952 1 server/config.go:489 ⋮ [n?] 9 +‹cache size             128 MiB›
+I221205 05:50:25.093952 1 server/config.go:489 ⋮ [n?] 9 +‹SQL memory pool size   3.8 GiB›
+I221205 05:50:25.093952 1 server/config.go:489 ⋮ [n?] 9 +‹scan interval          10m0s›
+I221205 05:50:25.093952 1 server/config.go:489 ⋮ [n?] 9 +‹scan min idle time     10ms›
+I221205 05:50:25.093952 1 server/config.go:489 ⋮ [n?] 9 +‹scan max idle time     1s›
+I221205 05:50:25.093952 1 server/config.go:489 ⋮ [n?] 9 +‹event log enabled      true›
+I221205 05:50:25.093952 1 server/config.go:489 ⋮ [n?] 9 +‹span configs enabled   true›
+I221205 05:50:25.094035 1 1@cli/start.go:1085 ⋮ [n?] 10  using local environment variables:
+I221205 05:50:25.094035 1 1@cli/start.go:1085 ⋮ [n?] 10 +COCKROACH_BACKGROUND_RESTART=1
+I221205 05:50:25.094035 1 1@cli/start.go:1085 ⋮ [n?] 10 +LANG=‹en_GB.UTF-8›
+I221205 05:50:25.094035 1 1@cli/start.go:1085 ⋮ [n?] 10 +TERM=‹xterm-256color›
+I221205 05:50:25.094048 1 1@cli/start.go:1092 ⋮ [n?] 11  process identity: ‹uid 1001 euid 1001 gid 1001 egid 1001›
+I221205 05:50:25.099019 1 1@cli/start.go:1307 ⋮ [n?] 12  GEOS loaded from directory ‹/usr/local/lib/cockroach›
+I221205 05:50:25.099052 1 1@cli/start.go:576 ⋮ [n?] 13  starting cockroach node
+I221205 05:50:25.346522 89 server/config.go:665 ⋮ [n?] 14  1 storage engine‹› initialized
+I221205 05:50:25.346546 89 server/config.go:668 ⋮ [n?] 15  Pebble cache size: 128 MiB
+I221205 05:50:25.346555 89 server/config.go:668 ⋮ [n?] 16  store 0: max size 0 B, max open file limit 1043576
+I221205 05:50:25.346558 89 server/config.go:668 ⋮ [n?] 17  store 0: {Encrypted:false ReadOnly:false FileStoreProperties:{path=‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data›, fs=squashfs, blkdev=‹/dev/loop13›, mnt=‹/snap/core20/1738› opts=‹ro,nodev,relatime,errors=continue›}}
+I221205 05:50:25.351394 89 server/tracedumper/tracedumper.go:120 ⋮ [n?] 18  writing job trace dumps to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/inflight_trace_dump›
+I221205 05:50:25.380130 89 1@server/clock_monotonicity.go:65 ⋮ [n?] 19  monitoring forward clock jumps based on server.clock.forward_jump_check_enabled
+I221205 05:50:25.383973 89 1@server/clock_monotonicity.go:140 ⋮ [n1] 20  Sleeping till wall time 1670219425383971450 to catches up to 1670219425880121456 to ensure monotonicity. Delta: 496.150006ms
+I221205 05:50:25.383997 199 1@server/server.go:1307 ⋮ [n1] 21  connecting to gossip network to verify cluster ID ‹"0183e114-412f-42bb-8f90-770999054dc5"›
+W221205 05:50:25.885716 89 1@gossip/pkg/gossip/gossip.go:1531 ⋮ [n1] 22  no addresses found; use --join to specify a connected node
+I221205 05:50:25.885851 89 gossip/pkg/gossip/gossip.go:401 ⋮ [n1] 23  NodeDescriptor set to ‹node_id:1 address:<network_field:"tcp" address_field:"localhost:26257" > attrs:<> locality:<> ServerVersion:<major_val:22 minor_val:1 patch:0 internal:0 > build_tag:"v22.1.10" started_at:1670219425885831607 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26257" > http_address:<network_field:"tcp" address_field:"localhost:8080" >›
+I221205 05:50:25.896239 89 server/node.go:469 ⋮ [n1] 24  initialized store s1
+I221205 05:50:25.896355 89 kv/kvserver/pkg/kv/kvserver/stores.go:250 ⋮ [n1] 25  read 0 node addresses from persistent storage
+I221205 05:50:25.896428 199 1@server/server.go:1310 ⋮ [n1] 26  node connected via gossip
+I221205 05:50:25.898324 89 server/node.go:548 ⋮ [n1] 27  started with engine type ‹2›
+I221205 05:50:25.898398 89 server/node.go:550 ⋮ [n1] 28  started with attributes []
+I221205 05:50:25.898493 89 server/goroutinedumper/goroutinedumper.go:122 ⋮ [n1] 29  writing goroutine dumps to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/goroutine_dump›
+I221205 05:50:25.898565 89 server/heapprofiler/heapprofiler.go:49 ⋮ [n1] 30  writing go heap profiles to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/heap_profiler› at least every 1h0m0s
+I221205 05:50:25.898593 89 server/heapprofiler/cgoprofiler.go:53 ⋮ [n1] 31  to enable jmalloc profiling: "export MALLOC_CONF=prof:true" or "ln -s prof:true /etc/malloc.conf"
+I221205 05:50:25.898620 89 server/heapprofiler/statsprofiler.go:54 ⋮ [n1] 32  writing memory stats to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/heap_profiler› at last every 1h0m0s
+I221205 05:50:25.898900 89 server/heapprofiler/activequeryprofiler.go:85 ⋮ [n1] 33  writing go query profiles to ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs/heap_profiler›
+I221205 05:50:25.899003 89 1@server/server.go:1446 ⋮ [n1] 34  starting http server at ‹127.0.0.1:8080› (use: ‹localhost:8080›)
+I221205 05:50:25.899385 89 1@server/server.go:1453 ⋮ [n1] 35  starting grpc/postgres server at ‹127.0.0.1:26257›
+I221205 05:50:25.899430 89 1@server/server.go:1454 ⋮ [n1] 36  advertising CockroachDB node at ‹localhost:26257›
+I221205 05:50:25.962932 334 kv/kvclient/rangefeed/rangefeedcache/watcher.go:316 ⋮ [n1] 37  spanconfig-subscriber: established range feed cache
+I221205 05:50:25.995518 89 1@util/log/event_log.go:32 ⋮ [n1] 38 ={"Timestamp":1670219425995516522,"EventType":"node_restart","NodeID":1,"StartedAt":1670219425885831607,"LastUp":1670219230261952508}
+I221205 05:50:25.995692 89 sql/sqlliveness/slinstance/slinstance.go:313 ⋮ [n1] 39  starting SQL liveness instance
+I221205 05:50:26.004817 514 sql/sqlliveness/slstorage/slstorage.go:406 ⋮ [n1] 40  inserted sqlliveness session 744342661f514434a86b995de8f006d6
+I221205 05:50:26.004838 514 sql/sqlliveness/slinstance/slinstance.go:198 ⋮ [n1] 41  created new SQL liveness session 744342661f514434a86b995de8f006d6
+I221205 05:50:26.005774 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/provider.go:132 ⋮ [n1] 42  starting sql-stats-worker with initial delay: 10m1.406184841s
+I221205 05:50:26.005795 511 sql/temporary_schema.go:514 ⋮ [n1] 43  running temporary object cleanup background job
+I221205 05:50:26.005970 497 kv/kvserver/pkg/kv/kvserver/replica_rangefeed.go:705 ⋮ [n1,rangefeed=‹lease›,s1,r6] 44  RangeFeed closed timestamp 1670217121.245359312,0 is behind by 38m24.760609193s
+I221205 05:50:26.007055 511 sql/temporary_schema.go:559 ⋮ [n1] 45  found 0 temporary schemas
+I221205 05:50:26.007071 511 sql/temporary_schema.go:562 ⋮ [n1] 46  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 05:50:26.007081 511 sql/temporary_schema.go:563 ⋮ [n1] 47  completed temporary object cleanup job
+I221205 05:50:26.007090 511 sql/temporary_schema.go:646 ⋮ [n1] 48  temporary object cleaner next scheduled to run at 2022-12-05 06:20:26.005773421 +0000 UTC
+I221205 05:50:26.013488 595 kv/kvclient/rangefeed/rangefeedcache/watcher.go:316 ⋮ [n1] 49  settings-watcher: established range feed cache
+I221205 05:50:26.013802 89 server/server_sql.go:1290 ⋮ [n1] 50  done ensuring all necessary startup migrations have run
+I221205 05:50:26.013849 598 kv/kvclient/rangefeed/rangefeedcache/watcher.go:316 ⋮ [n1] 51  system-config-cache: established range feed cache
+I221205 05:50:26.013905 600 jobs/job_scheduler.go:433 ⋮ [n1] 52  waiting 2m0s before scheduled jobs daemon start
+I221205 05:50:26.013928 604 kv/kvclient/rangefeed/rangefeedcache/watcher.go:316 ⋮ [n1] 53  tenant-settings-watcher: established range feed cache
+I221205 05:50:26.018320 603 server/auto_upgrade.go:59 ⋮ [n1] 54  no need to upgrade, cluster already at the newest version
+I221205 05:50:26.038426 89 1@server/server_sql.go:1360 ⋮ [n1] 55  serving sql connections
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56  node startup completed:
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +CockroachDB node starting at 2022-12-05 05:50:26.038446555 +0000 UTC (took 0.9s)
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +build:               CCL v22.1.10 @ 2022/10/27 19:46:05 (go1.17.11)
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +webui:               ‹http://localhost:8080›
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +sql:                 ‹postgresql://root@localhost:26257/defaultdb?sslmode=disable›
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +sql (JDBC):          ‹jdbc:postgresql://localhost:26257/defaultdb?sslmode=disable&user=root›
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +RPC client flags:    ‹cockroach <client cmd> --host=localhost:26257 --insecure›
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +logs:                ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/logs›
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +temp dir:            ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/cockroach-temp3447321121›
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +external I/O path:   ‹/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data/extern›
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +store[0]:            ‹path=/home/ecom-kalaivanibm/Projects/Frontend-Miniproject/my-app/Backend/cockroach-data›
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +storage engine:      pebble
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +clusterID:           ‹0183e114-412f-42bb-8f90-770999054dc5›
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +status:              restarted pre-existing node
+I221205 05:50:26.039078 89 1@cli/start.go:1028 ⋮ [n1] 56 +nodeID:              1
+I221205 05:50:26.322198 749 sql/catalog/lease/lease.go:1294 ⋮ [n1] 57  released orphaned lease: {id:‹6› version:1 expiration:{Time:{wall:196966000 ext:63805816315 loc:<nil>}}}
+I221205 05:50:26.323335 746 sql/catalog/lease/lease.go:1294 ⋮ [n1] 58  released orphaned lease: {id:‹4› version:1 expiration:{Time:{wall:853520000 ext:63805816337 loc:<nil>}}}
+I221205 05:50:26.323336 747 sql/catalog/lease/lease.go:1294 ⋮ [n1] 59  released orphaned lease: {id:‹5› version:1 expiration:{Time:{wall:767965000 ext:63805816172 loc:<nil>}}}
+I221205 05:50:26.323350 750 sql/catalog/lease/lease.go:1294 ⋮ [n1] 60  released orphaned lease: {id:‹12› version:1 expiration:{Time:{wall:298674000 ext:63805816193 loc:<nil>}}}
+I221205 05:50:26.323439 748 sql/catalog/lease/lease.go:1294 ⋮ [n1] 61  released orphaned lease: {id:‹6› version:1 expiration:{Time:{wall:649474000 ext:63805816173 loc:<nil>}}}
+I221205 05:50:26.327559 705 sql/catalog/lease/lease.go:1294 ⋮ [n1] 62  released orphaned lease: {id:‹20› version:1 expiration:{Time:{wall:402053000 ext:63805816193 loc:<nil>}}}
+I221205 05:50:26.328461 771 sql/catalog/lease/lease.go:1294 ⋮ [n1] 63  released orphaned lease: {id:‹23› version:1 expiration:{Time:{wall:967773000 ext:63805816168 loc:<nil>}}}
+I221205 05:50:26.328507 725 sql/catalog/lease/lease.go:1294 ⋮ [n1] 64  released orphaned lease: {id:‹15› version:1 expiration:{Time:{wall:481695000 ext:63805816185 loc:<nil>}}}
+I221205 05:50:26.328530 770 sql/catalog/lease/lease.go:1294 ⋮ [n1] 65  released orphaned lease: {id:‹21› version:1 expiration:{Time:{wall:581827000 ext:63805816181 loc:<nil>}}}
+I221205 05:50:26.328541 589 sql/catalog/lease/lease.go:1294 ⋮ [n1] 66  released orphaned lease: {id:‹24› version:1 expiration:{Time:{wall:619126000 ext:63805816173 loc:<nil>}}}
+I221205 05:50:26.329763 591 sql/catalog/lease/lease.go:1294 ⋮ [n1] 67  released orphaned lease: {id:‹25› version:1 expiration:{Time:{wall:559997000 ext:63805816179 loc:<nil>}}}
+I221205 05:50:26.332843 762 sql/catalog/lease/lease.go:1294 ⋮ [n1] 68  released orphaned lease: {id:‹27› version:1 expiration:{Time:{wall:711418000 ext:63805816323 loc:<nil>}}}
+I221205 05:50:26.332847 720 sql/catalog/lease/lease.go:1294 ⋮ [n1] 70  released orphaned lease: {id:‹32› version:1 expiration:{Time:{wall:835307000 ext:63805816173 loc:<nil>}}}
+I221205 05:50:26.332848 773 sql/catalog/lease/lease.go:1294 ⋮ [n1] 69  released orphaned lease: {id:‹28› version:1 expiration:{Time:{wall:264731000 ext:63805816175 loc:<nil>}}}
+I221205 05:50:26.332863 593 sql/catalog/lease/lease.go:1294 ⋮ [n1] 71  released orphaned lease: {id:‹26› version:1 expiration:{Time:{wall:740483000 ext:63805816169 loc:<nil>}}}
+I221205 05:50:26.332868 570 sql/catalog/lease/lease.go:1294 ⋮ [n1] 72  released orphaned lease: {id:‹31› version:1 expiration:{Time:{wall:206506000 ext:63805816178 loc:<nil>}}}
+I221205 05:50:26.335306 634 sql/catalog/lease/lease.go:1294 ⋮ [n1] 73  released orphaned lease: {id:‹32› version:1 expiration:{Time:{wall:289722000 ext:63805816326 loc:<nil>}}}
+I221205 05:50:26.336167 727 sql/catalog/lease/lease.go:1294 ⋮ [n1] 74  released orphaned lease: {id:‹37› version:1 expiration:{Time:{wall:302719000 ext:63805816187 loc:<nil>}}}
+I221205 05:50:26.336209 635 sql/catalog/lease/lease.go:1294 ⋮ [n1] 75  released orphaned lease: {id:‹33› version:1 expiration:{Time:{wall:900275000 ext:63805816189 loc:<nil>}}}
+I221205 05:50:26.336237 636 sql/catalog/lease/lease.go:1294 ⋮ [n1] 76  released orphaned lease: {id:‹35› version:1 expiration:{Time:{wall:928854000 ext:63805816188 loc:<nil>}}}
+I221205 05:50:26.336272 775 sql/catalog/lease/lease.go:1294 ⋮ [n1] 77  released orphaned lease: {id:‹42› version:1 expiration:{Time:{wall:931167000 ext:63805816181 loc:<nil>}}}
+I221205 05:50:26.337391 753 sql/catalog/lease/lease.go:1294 ⋮ [n1] 78  released orphaned lease: {id:‹43› version:1 expiration:{Time:{wall:122731000 ext:63805816173 loc:<nil>}}}
+I221205 05:50:26.338838 787 sql/catalog/lease/lease.go:1294 ⋮ [n1] 79  released orphaned lease: {id:‹45› version:1 expiration:{Time:{wall:344427000 ext:63805816188 loc:<nil>}}}
+I221205 05:50:26.338844 764 sql/catalog/lease/lease.go:1294 ⋮ [n1] 80  released orphaned lease: {id:‹47› version:1 expiration:{Time:{wall:382317000 ext:63805816310 loc:<nil>}}}
+I221205 05:50:26.339760 638 sql/catalog/lease/lease.go:1294 ⋮ [n1] 81  released orphaned lease: {id:‹47› version:1 expiration:{Time:{wall:460930000 ext:63805816189 loc:<nil>}}}
+I221205 05:50:26.339761 777 sql/catalog/lease/lease.go:1294 ⋮ [n1] 82  released orphaned lease: {id:‹44› version:1 expiration:{Time:{wall:837951000 ext:63805816322 loc:<nil>}}}
+I221205 05:50:26.340707 640 sql/catalog/lease/lease.go:1294 ⋮ [n1] 83  released orphaned lease: {id:‹105› version:1 expiration:{Time:{wall:494850000 ext:63805816182 loc:<nil>}}}
+I221205 05:50:26.340707 641 sql/catalog/lease/lease.go:1294 ⋮ [n1] 84  released orphaned lease: {id:‹106› version:9 expiration:{Time:{wall:509869000 ext:63805816195 loc:<nil>}}}
+I221205 05:50:26.340713 819 sql/catalog/lease/lease.go:1294 ⋮ [n1] 85  released orphaned lease: {id:‹104› version:1 expiration:{Time:{wall:961072000 ext:63805816191 loc:<nil>}}}
+I221205 05:50:26.341733 836 sql/catalog/lease/lease.go:1294 ⋮ [n1] 86  released orphaned lease: {id:‹107› version:11 expiration:{Time:{wall:71134000 ext:63805816185 loc:<nil>}}}
+I221205 05:50:26.341768 835 sql/catalog/lease/lease.go:1294 ⋮ [n1] 87  released orphaned lease: {id:‹106› version:9 expiration:{Time:{wall:117197000 ext:63805816332 loc:<nil>}}}
+I221205 05:50:26.342729 574 sql/catalog/lease/lease.go:1294 ⋮ [n1] 88  released orphaned lease: {id:‹107› version:11 expiration:{Time:{wall:330538000 ext:63805816330 loc:<nil>}}}
+I221205 05:50:28.262025 41 1@gossip/pkg/gossip/gossip.go:1547 ⋮ [n1] 89  node has connected to cluster via gossip
+I221205 05:50:28.264181 41 kv/kvserver/pkg/kv/kvserver/stores.go:269 ⋮ [n1] 90  wrote 0 node addresses to persistent storage
+I221205 05:50:36.985414 1050 sql/sqlliveness/slstorage/slstorage.go:316 ⋮ [n1,intExec=‹expire-sessions›] 91  deleted session 76fd6987531b462280f7f6e0869bb703 which expired at 1670219268.250128327,0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92  
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +    WAL         2   979 K       -   974 K       -       -       -       -   979 K       -       -       -     1.0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +      6         1   651 K       -   346 K     0 B       0     0 B       0   651 K       1   941 K       1     1.9
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +  total         1   651 K       -   979 K     0 B       0     0 B       0   1.6 M       1   941 K       1     1.7
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +  flush         0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +compact         1     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +  ctype         1       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 + memtbl         2    64 M
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +zmemtbl         0     0 B
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +   ztbl         0     0 B
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 + bcache        22   813 K   95.1%  (score == hit-rate)
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 + tcache         1   680 B   99.8%  (score == hit-rate)
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 +  snaps         0       -       0  (score == earliest seq num)
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 + titers         0
+I221205 05:50:45.899600 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 92 + filter         -       -    0.0%  (score == utility)
+I221205 05:50:57.861327 540 jobs/adopt.go:106 ⋮ [n1] 93  claimed 1 jobs
+I221205 05:50:57.868120 1324 jobs/adopt.go:241 ⋮ [n1] 94  job 819680297832382465: resuming execution
+I221205 05:50:57.877966 1327 jobs/registry.go:1205 ⋮ [n1] 95  AUTO SPAN CONFIG RECONCILIATION job 819680297832382465: stepping through state running with error: <nil>
+I221205 05:50:57.928146 1327 spanconfig/spanconfigsqlwatcher/sqlwatcher.go:263 ⋮ [n1,job=819680297832382465] 96  established range feed over system.descriptors starting at time 1670219457.902157601,0
+I221205 05:50:57.928180 1327 spanconfig/spanconfigsqlwatcher/sqlwatcher.go:316 ⋮ [n1,job=819680297832382465] 97  established range feed over system.zones starting at time 1670219457.902157601,0
+I221205 05:50:57.928196 1327 spanconfig/spanconfigsqlwatcher/sqlwatcher.go:411 ⋮ [n1,job=819680297832382465] 98  established range feed over system.protected_ts_records starting at time 1670219457.902157601,0
+W221205 05:53:17.075069 647 2@rpc/pkg/rpc/clock_offset.go:216 ⋮ [n1,rnode=1,raddr=‹localhost:26257›,class=default,heartbeat] 99  latency jump (prev avg 0.52ms, current 1.25ms)
+I221205 06:00:07.387435 600 jobs/job_scheduler.go:179 ⋮ [n1] 100  Starting job for schedule 819680297888776193 (‹"sql-stats-compaction"›); scheduled to run at 2022-12-05 06:00:00 +0000 UTC; next run scheduled for 2022-12-05 07:00:00 +0000 UTC
+E221205 06:00:25.902774 31 kv/kvserver/pkg/kv/kvserver/queue.go:1221 ⋮ [n1,replicate] 101  6 replicas failing with ‹"0 of 1 live stores are able to take a new replica for the range (1 already has a voter, 0 already have a non-voter); likely not enough nodes in cluster"›
+I221205 06:00:32.198201 540 jobs/adopt.go:106 ⋮ [n1] 102  claimed 1 jobs
+I221205 06:00:32.204454 9370 jobs/adopt.go:241 ⋮ [n1] 103  job 819690233487458305: resuming execution
+I221205 06:00:32.212307 9373 jobs/registry.go:1205 ⋮ [n1] 104  AUTO SQL STATS COMPACTION job 819690233487458305: stepping through state running with error: <nil>
+I221205 06:00:32.220012 9373 sql/compact_sql_stats.go:43 ⋮ [n1,job=819690233487458305] 105  starting sql stats compaction job
+I221205 06:00:32.237160 9373 sql/compact_sql_stats.go:104 ⋮ [n1,job=819690233487458305] 106  sql stats compaction job terminated with status = succeeded
+I221205 06:00:32.238953 9373 jobs/registry.go:1205 ⋮ [n1] 107  AUTO SQL STATS COMPACTION job 819690233487458305: stepping through state succeeded with error: <nil>
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108  
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +    WAL         2    27 M       -    27 M       -       -       -       -    27 M       -       -       -     1.0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +      6         1   651 K       -   346 K     0 B       0     0 B       0   651 K       1   941 K       1     1.9
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +  total         1   651 K       -    27 M     0 B       0     0 B       0    28 M       1   941 K       1     1.0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +  flush         0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +compact         1     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +  ctype         1       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 + memtbl         2    64 M
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +zmemtbl         0     0 B
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +   ztbl         0     0 B
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 + bcache        32   1.1 M   99.2%  (score == hit-rate)
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 +  snaps         0       -       0  (score == earliest seq num)
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 + titers         0
+I221205 06:00:45.899068 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 108 + filter         -       -    0.0%  (score == utility)
+I221205 06:01:52.395966 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 109  flushing 71 stmt/txn fingerprints (430080 bytes) after 2.003µs
+I221205 06:05:26.005599 292 util/admission/work_queue.go:475 ⋮ [-] 110  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:10:25.705289 120 util/admission/work_queue.go:475 ⋮ [n1] 111  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+E221205 06:10:25.902569 31 kv/kvserver/pkg/kv/kvserver/queue.go:1221 ⋮ [n1,replicate] 112  6 replicas failing with ‹"0 of 1 live stores are able to take a new replica for the range (1 already has a voter, 0 already have a non-voter); likely not enough nodes in cluster"›
+I221205 06:10:26.006085 292 util/admission/work_queue.go:475 ⋮ [-] 113  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114  
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +    WAL         2    54 M       -    54 M       -       -       -       -    54 M       -       -       -     1.0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +      6         1   651 K       -   346 K     0 B       0     0 B       0   651 K       1   941 K       1     1.9
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +  total         1   651 K       -    54 M     0 B       0     0 B       0    55 M       1   941 K       1     1.0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +  flush         0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +compact         1     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +  ctype         1       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 + memtbl         2    64 M
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +zmemtbl         0     0 B
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +   ztbl         0     0 B
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 + bcache        32   1.1 M   99.6%  (score == hit-rate)
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 +  snaps         0       -       0  (score == earliest seq num)
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 + titers         0
+I221205 06:10:45.899210 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 114 + filter         -       -    0.0%  (score == utility)
+I221205 06:11:47.740406 18869 kv/kvserver/pkg/kv/kvserver/replica_command.go:702 ⋮ [n1,merge,s1,r46/1:‹/Table/107{-/4}›] 115  initiating a merge of r47:‹/{Table/107/4-Max}› [(n1,s1):1, next=2, gen=3, sticky=1670220684.511245084,0] into this range (‹lhs+rhs has (size=2.2 KiB+615 B=2.8 KiB qps=5.92+0.28=6.20qps) below threshold (size=128 MiB, qps=1250.00)›)
+I221205 06:11:47.754471 223 kv/kvserver/pkg/kv/kvserver/store_remove_replica.go:150 ⋮ [n1,s1,r46/1:‹/Table/107{-/4}›,raft] 116  removing replica r47/1
+I221205 06:12:14.933209 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 117  flushing 34 stmt/txn fingerprints (245760 bytes) after 13.306µs
+I221205 06:15:26.105140 292 util/admission/work_queue.go:475 ⋮ [-] 118  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:20:25.705804 122 util/admission/work_queue.go:475 ⋮ [n1] 119  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+E221205 06:20:25.902029 31 kv/kvserver/pkg/kv/kvserver/queue.go:1221 ⋮ [n1,replicate] 120  6 replicas failing with ‹"0 of 1 live stores are able to take a new replica for the range (1 already has a voter, 0 already have a non-voter); likely not enough nodes in cluster"›
+I221205 06:20:26.006359 511 sql/temporary_schema.go:514 ⋮ [n1] 121  running temporary object cleanup background job
+I221205 06:20:26.008459 511 sql/temporary_schema.go:559 ⋮ [n1] 122  found 0 temporary schemas
+I221205 06:20:26.008486 511 sql/temporary_schema.go:562 ⋮ [n1] 123  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 06:20:26.008501 511 sql/temporary_schema.go:563 ⋮ [n1] 124  completed temporary object cleanup job
+I221205 06:20:26.008515 511 sql/temporary_schema.go:646 ⋮ [n1] 125  temporary object cleaner next scheduled to run at 2022-12-05 06:50:26.005773421 +0000 UTC
+I221205 06:20:26.105914 292 util/admission/work_queue.go:475 ⋮ [-] 126  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127  
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +    WAL         1    23 M       -    80 M       -       -       -       -    81 M       -       -       -     1.0
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +      0         0     0 B    0.00    57 M     0 B       0     0 B       0   472 K       1     0 B       0     0.0
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +      6         1   939 K       -   817 K     0 B       0     0 B       0   1.6 M       2   2.0 M       1     1.9
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +  total         1   939 K       -    81 M     0 B       0     0 B       0    83 M       3   2.0 M       1     1.0
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +  flush         1
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +compact         2     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +  ctype         2       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 + memtbl         1    64 M
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +zmemtbl         0     0 B
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +   ztbl         0     0 B
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 + bcache        38   1.3 M   99.3%  (score == hit-rate)
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 +  snaps         0       -       0  (score == earliest seq num)
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 + titers         0
+I221205 06:20:45.899428 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 127 + filter         -       -    0.0%  (score == utility)
+I221205 06:23:07.451843 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 128  flushing 37 stmt/txn fingerprints (245760 bytes) after 4.323µs
+I221205 06:25:26.105953 292 util/admission/work_queue.go:475 ⋮ [-] 129  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:30:25.706341 122 util/admission/work_queue.go:475 ⋮ [n1] 130  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+E221205 06:30:25.902159 31 kv/kvserver/pkg/kv/kvserver/queue.go:1221 ⋮ [n1,replicate] 131  6 replicas failing with ‹"0 of 1 live stores are able to take a new replica for the range (1 already has a voter, 0 already have a non-voter); likely not enough nodes in cluster"›
+I221205 06:30:26.205742 292 util/admission/work_queue.go:475 ⋮ [-] 132  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133  
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +    WAL         1    50 M       -   107 M       -       -       -       -   107 M       -       -       -     1.0
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +      0         0     0 B    0.00    57 M     0 B       0     0 B       0   472 K       1     0 B       0     0.0
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +      6         1   939 K       -   817 K     0 B       0     0 B       0   1.6 M       2   2.0 M       1     1.9
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +  total         1   939 K       -   107 M     0 B       0     0 B       0   109 M       3   2.0 M       1     1.0
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +  flush         1
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +compact         2     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +  ctype         2       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 + memtbl         1    64 M
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +zmemtbl         0     0 B
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +   ztbl         0     0 B
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 + bcache        38   1.3 M   99.4%  (score == hit-rate)
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 +  snaps         0       -       0  (score == earliest seq num)
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 + titers         0
+I221205 06:30:45.899293 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 133 + filter         -       -    0.0%  (score == utility)
+I221205 06:33:14.129517 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 134  flushing 32 stmt/txn fingerprints (235520 bytes) after 3.196µs
+W221205 06:33:16.464591 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 135  slow heartbeat took 1.06301433s; err=<nil>
+W221205 06:33:22.976987 647 2@rpc/pkg/rpc/clock_offset.go:216 ⋮ [n1,rnode=1,raddr=‹localhost:26257›,class=default,heartbeat] 136  latency jump (prev avg 128.06ms, current 432.26ms)
+W221205 06:33:32.636364 647 2@rpc/pkg/rpc/clock_offset.go:216 ⋮ [n1,rnode=1,raddr=‹localhost:26257›,class=default,heartbeat] 137  latency jump (prev avg 137.00ms, current 502.92ms)
+W221205 06:33:35.020393 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 138  slow heartbeat took 1.50385379s; err=<nil>
+W221205 06:33:52.004958 41 1@gossip/pkg/gossip/gossip.go:1531 ⋮ [n1] 139  no addresses found; use --join to specify a connected node
+I221205 06:33:50.845342 279 kv/kvserver/pkg/kv/kvserver/replica_rangefeed.go:705 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] 140  RangeFeed closed timestamp 1670222012.840205294,0 is behind by 17.309924716s
+W221205 06:33:51.998989 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 141  slow heartbeat took 10.164548478s; err=context deadline exceeded
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142  failed node liveness heartbeat: ‹operation "node liveness heartbeat" timed out after 14.557s (given timeout 4.5s)›: context deadline exceeded
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142 +(1) ‹operation "node liveness heartbeat" timed out after 14.557s (given timeout 4.5s)›
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142 +Wraps: (2) context deadline exceeded
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142 +Error types: (1) *contextutil.TimeoutError (2) context.deadlineExceededError
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142 +
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142 +An inability to maintain liveness will prevent a node from participating in a
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142 +cluster. If this problem persists, it may be a sign of resource starvation or
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142 +of network connectivity problems. For help troubleshooting, visit:
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142 +
+W221205 06:33:53.333735 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 142 +    https://www.cockroachlabs.com/docs/stable/cluster-setup-troubleshooting.html#node-liveness-issues
+I221205 06:33:53.353750 41 1@gossip/pkg/gossip/gossip.go:1547 ⋮ [n1] 143  node has connected to cluster via gossip
+I221205 06:33:53.374737 31 kv/kvserver/pkg/kv/kvserver/queue.go:1206 ⋮ [n1,replicate] 144  purgatory is now empty
+W221205 06:33:55.476022 37713 google.golang.org/grpc/grpclog/external/org_golang_google_grpc/grpclog/component.go:41 ⋮ [-] 145  ‹[core]›‹[Channel #8 SubChannel #9] grpc: addrConn.createTransport failed to connect to {›
+W221205 06:33:55.476022 37713 google.golang.org/grpc/grpclog/external/org_golang_google_grpc/grpclog/component.go:41 ⋮ [-] 145 +‹  "Addr": "localhost:26257",›
+W221205 06:33:55.476022 37713 google.golang.org/grpc/grpclog/external/org_golang_google_grpc/grpclog/component.go:41 ⋮ [-] 145 +‹  "ServerName": "localhost:26257",›
+W221205 06:33:55.476022 37713 google.golang.org/grpc/grpclog/external/org_golang_google_grpc/grpclog/component.go:41 ⋮ [-] 145 +‹  "Attributes": null,›
+W221205 06:33:55.476022 37713 google.golang.org/grpc/grpclog/external/org_golang_google_grpc/grpclog/component.go:41 ⋮ [-] 145 +‹  "BalancerAttributes": null,›
+W221205 06:33:55.476022 37713 google.golang.org/grpc/grpclog/external/org_golang_google_grpc/grpclog/component.go:41 ⋮ [-] 145 +‹  "Type": 0,›
+W221205 06:33:55.476022 37713 google.golang.org/grpc/grpclog/external/org_golang_google_grpc/grpclog/component.go:41 ⋮ [-] 145 +‹  "Metadata": null›
+W221205 06:33:55.476022 37713 google.golang.org/grpc/grpclog/external/org_golang_google_grpc/grpclog/component.go:41 ⋮ [-] 145 +‹}. Err: connection error: desc = "transport: Error while dialing cannot reuse client connection"›
+I221205 06:35:25.805462 122 util/admission/work_queue.go:475 ⋮ [n1] 146  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:35:25.905788 120 util/admission/work_queue.go:475 ⋮ [n1] 147  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:35:26.305716 292 util/admission/work_queue.go:475 ⋮ [-] 148  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:40:26.005626 120 util/admission/work_queue.go:475 ⋮ [n1] 149  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:40:26.405640 292 util/admission/work_queue.go:475 ⋮ [-] 150  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151  
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +    WAL         1    19 M       -   134 M       -       -       -       -   134 M       -       -       -     1.0
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +      0         0     0 B    0.00   115 M     0 B       0     0 B       0   883 K       2     0 B       0     0.0
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +      6         1   1.1 M       -   1.2 M     0 B       0     0 B       0   2.7 M       3   3.3 M       1     2.2
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +  total         1   1.1 M       -   134 M     0 B       0     0 B       0   137 M       5   3.3 M       1     1.0
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +  flush         2
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +compact         3     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +  ctype         3       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 + memtbl         1    64 M
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +zmemtbl         0     0 B
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +   ztbl         0     0 B
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 + bcache        39   1.3 M   99.2%  (score == hit-rate)
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 +  snaps         0       -       0  (score == earliest seq num)
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 + titers         0
+I221205 06:40:45.900002 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 151 + filter         -       -   82.9%  (score == utility)
+I221205 06:44:40.990183 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 152  flushing 50 stmt/txn fingerprints (245760 bytes) after 2.335µs
+I221205 06:45:25.905708 122 util/admission/work_queue.go:475 ⋮ [n1] 153  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:45:26.106075 120 util/admission/work_queue.go:475 ⋮ [n1] 154  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:45:26.405887 292 util/admission/work_queue.go:475 ⋮ [-] 155  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:50:25.899604 206 gossip/pkg/gossip/gossip.go:401 ⋮ [n1] 156  NodeDescriptor set to ‹node_id:1 address:<network_field:"tcp" address_field:"localhost:26257" > attrs:<> locality:<> ServerVersion:<major_val:22 minor_val:1 patch:0 internal:0 > build_tag:"v22.1.10" started_at:1670219425885831607 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26257" > http_address:<network_field:"tcp" address_field:"localhost:8080" >›
+I221205 06:50:26.005429 122 util/admission/work_queue.go:475 ⋮ [n1] 157  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:50:26.006843 511 sql/temporary_schema.go:514 ⋮ [n1] 158  running temporary object cleanup background job
+I221205 06:50:26.008262 511 sql/temporary_schema.go:559 ⋮ [n1] 159  found 0 temporary schemas
+I221205 06:50:26.008283 511 sql/temporary_schema.go:562 ⋮ [n1] 160  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 06:50:26.008298 511 sql/temporary_schema.go:563 ⋮ [n1] 161  completed temporary object cleanup job
+I221205 06:50:26.008310 511 sql/temporary_schema.go:646 ⋮ [n1] 162  temporary object cleaner next scheduled to run at 2022-12-05 07:20:26.005773421 +0000 UTC
+I221205 06:50:26.205169 120 util/admission/work_queue.go:475 ⋮ [n1] 163  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:50:26.405892 292 util/admission/work_queue.go:475 ⋮ [-] 164  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165  
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +    WAL         1    46 M       -   160 M       -       -       -       -   160 M       -       -       -     1.0
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +      0         0     0 B    0.00   115 M     0 B       0     0 B       0   883 K       2     0 B       0     0.0
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +      6         1   1.1 M       -   1.2 M     0 B       0     0 B       0   2.7 M       3   3.3 M       1     2.2
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +  total         1   1.1 M       -   160 M     0 B       0     0 B       0   164 M       5   3.3 M       1     1.0
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +  flush         2
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +compact         3     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +  ctype         3       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 + memtbl         1    64 M
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +zmemtbl         0     0 B
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +   ztbl         0     0 B
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 + bcache        39   1.3 M   99.3%  (score == hit-rate)
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 +  snaps         0       -       0  (score == earliest seq num)
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 + titers         0
+I221205 06:50:45.899171 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 165 + filter         -       -   82.9%  (score == utility)
+I221205 06:54:59.709319 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 166  flushing 64 stmt/txn fingerprints (286720 bytes) after 310.327µs
+I221205 06:55:26.205915 120 util/admission/work_queue.go:475 ⋮ [n1] 167  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 06:55:26.505374 292 util/admission/work_queue.go:475 ⋮ [-] 168  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:00:26.005755 122 util/admission/work_queue.go:475 ⋮ [n1] 169  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:00:26.306111 120 util/admission/work_queue.go:475 ⋮ [n1] 170  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:00:26.505827 292 util/admission/work_queue.go:475 ⋮ [-] 171  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172  
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +    WAL         1    16 M       -   187 M       -       -       -       -   187 M       -       -       -     1.0
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +      0         0     0 B    0.00   172 M     0 B       0     0 B       0   1.3 M       3     0 B       0     0.0
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +      6         1   1.4 M       -   1.6 M     0 B       0     0 B       0   4.1 M       4   4.9 M       1     2.5
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +  total         1   1.4 M       -   187 M     0 B       0     0 B       0   193 M       7   4.9 M       1     1.0
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +  flush         3
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +compact         4     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +  ctype         4       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 + memtbl         1    64 M
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +zmemtbl         0     0 B
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +   ztbl         0     0 B
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 + bcache        44   1.6 M   99.1%  (score == hit-rate)
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 +  snaps         0       -       0  (score == earliest seq num)
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 + titers         0
+I221205 07:00:45.899536 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 172 + filter         -       -   82.9%  (score == utility)
+I221205 07:00:55.059702 600 jobs/job_scheduler.go:179 ⋮ [n1] 173  Starting job for schedule 819680297888776193 (‹"sql-stats-compaction"›); scheduled to run at 2022-12-05 07:00:00 +0000 UTC; next run scheduled for 2022-12-05 08:00:00 +0000 UTC
+I221205 07:01:05.626156 540 jobs/adopt.go:106 ⋮ [n1] 174  claimed 1 jobs
+I221205 07:01:05.630266 60391 jobs/adopt.go:241 ⋮ [n1] 175  job 819702186184310785: resuming execution
+I221205 07:01:05.635854 60394 jobs/registry.go:1205 ⋮ [n1] 176  AUTO SQL STATS COMPACTION job 819702186184310785: stepping through state running with error: <nil>
+I221205 07:01:05.638356 60394 sql/compact_sql_stats.go:43 ⋮ [n1,job=819702186184310785] 177  starting sql stats compaction job
+I221205 07:01:05.650158 60394 sql/compact_sql_stats.go:104 ⋮ [n1,job=819702186184310785] 178  sql stats compaction job terminated with status = succeeded
+I221205 07:01:05.651496 60394 jobs/registry.go:1205 ⋮ [n1] 179  AUTO SQL STATS COMPACTION job 819702186184310785: stepping through state succeeded with error: <nil>
+I221205 07:03:36.291615 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 180  flushing 46 stmt/txn fingerprints (307200 bytes) after 3.565µs
+I221205 07:07:28.352009 279 kv/kvserver/pkg/kv/kvserver/replica_rangefeed.go:705 ⋮ [n1,s1,r28/1:‹/Table/3{2-3}›] 181  RangeFeed closed timestamp 1670223886.123914168,0 is behind by 2m42.228090633s
+I221205 07:13:36.334475 279 kv/kvserver/pkg/kv/kvserver/replica_rangefeed.go:705 ⋮ [n1,s1,r28/1:‹/Table/3{2-3}›] 182  RangeFeed closed timestamp 1670224252.831379879,0 is behind by 2m43.503090543s
+W221205 07:13:36.347749 41 1@gossip/pkg/gossip/gossip.go:1531 ⋮ [n1] 183  no addresses found; use --join to specify a connected node
+I221205 07:13:38.256246 41 1@gossip/pkg/gossip/gossip.go:1547 ⋮ [n1] 184  node has connected to cluster via gossip
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185  
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +    WAL         1    42 M       -   214 M       -       -       -       -   214 M       -       -       -     1.0
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +      0         0     0 B    0.00   172 M     0 B       0     0 B       0   1.3 M       3     0 B       0     0.0
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +      6         1   1.4 M       -   1.6 M     0 B       0     0 B       0   4.1 M       4   4.9 M       1     2.5
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +  total         1   1.4 M       -   214 M     0 B       0     0 B       0   219 M       7   4.9 M       1     1.0
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +  flush         3
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +compact         4     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +  ctype         4       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 + memtbl         1    64 M
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +zmemtbl         0     0 B
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +   ztbl         0     0 B
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 + bcache        45   1.6 M   99.3%  (score == hit-rate)
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 +  snaps         0       -       0  (score == earliest seq num)
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 + titers         0
+I221205 07:16:00.578302 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 185 + filter         -       -   82.9%  (score == utility)
+I221205 07:18:33.605716 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 186  flushing 26 stmt/txn fingerprints (225280 bytes) after 2.835µs
+I221205 07:25:40.685445 511 sql/temporary_schema.go:514 ⋮ [n1] 187  running temporary object cleanup background job
+I221205 07:25:40.687687 511 sql/temporary_schema.go:559 ⋮ [n1] 188  found 0 temporary schemas
+I221205 07:25:40.687709 511 sql/temporary_schema.go:562 ⋮ [n1] 189  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 07:25:40.688518 511 sql/temporary_schema.go:563 ⋮ [n1] 190  completed temporary object cleanup job
+I221205 07:25:40.688545 511 sql/temporary_schema.go:646 ⋮ [n1] 191  temporary object cleaner next scheduled to run at 2022-12-05 07:50:26.005773421 +0000 UTC
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192  
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +    WAL         1    12 M       -   240 M       -       -       -       -   240 M       -       -       -     1.0
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +      0         0     0 B    0.00   229 M     0 B       0     0 B       0   1.8 M       4     0 B       0     0.0
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +      6         1   1.7 M       -   2.1 M     0 B       0     0 B       0   5.7 M       5   6.8 M       1     2.7
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +  total         1   1.7 M       -   240 M     0 B       0     0 B       0   248 M       9   6.8 M       1     1.0
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +  flush         4
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +compact         5     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +  ctype         5       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 + memtbl         1    64 M
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +zmemtbl         0     0 B
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +   ztbl         0     0 B
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 + bcache        24   915 K   99.1%  (score == hit-rate)
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 +  snaps         0       -       0  (score == earliest seq num)
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 + titers         0
+I221205 07:26:00.578571 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 192 + filter         -       -   82.9%  (score == utility)
+I221205 07:27:39.975806 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 193  flushing 26 stmt/txn fingerprints (225280 bytes) after 3.535µs
+I221205 07:28:36.505731 292 util/admission/work_queue.go:475 ⋮ [-] 194  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:28:36.505616 120 util/admission/work_queue.go:475 ⋮ [n1] 195  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196  
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +    WAL         1    38 M       -   266 M       -       -       -       -   267 M       -       -       -     1.0
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +      0         0     0 B    0.00   229 M     0 B       0     0 B       0   1.8 M       4     0 B       0     0.0
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +      6         1   1.7 M       -   2.1 M     0 B       0     0 B       0   5.7 M       5   6.8 M       1     2.7
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +  total         1   1.7 M       -   267 M     0 B       0     0 B       0   274 M       9   6.8 M       1     1.0
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +  flush         4
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +compact         5     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +  ctype         5       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 + memtbl         1    64 M
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +zmemtbl         0     0 B
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +   ztbl         0     0 B
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 + bcache        41   1.4 M   99.2%  (score == hit-rate)
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 +  snaps         0       -       0  (score == earliest seq num)
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 + titers         0
+I221205 07:36:00.578693 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 196 + filter         -       -   82.9%  (score == utility)
+I221205 07:36:31.038276 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 197  flushing 26 stmt/txn fingerprints (225280 bytes) after 3.369µs
+I221205 07:43:36.606087 122 util/admission/work_queue.go:475 ⋮ [n1] 198  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199  
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +    WAL         1   7.7 M       -   293 M       -       -       -       -   294 M       -       -       -     1.0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +      0         0     0 B    0.00   286 M     0 B       0     0 B       0   2.2 M       5     0 B       0     0.0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +      6         1   1.9 M       -   2.6 M     0 B       0     0 B       0   7.6 M       6   8.9 M       1     3.0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +  total         1   1.9 M       -   294 M     0 B       0     0 B       0   303 M      11   8.9 M       1     1.0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +  flush         5
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +compact         6     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +  ctype         6       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 + memtbl         1    64 M
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +zmemtbl         0     0 B
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +   ztbl         0     0 B
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 + bcache        26   1.1 M   99.0%  (score == hit-rate)
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 +  snaps         0       -       0  (score == earliest seq num)
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 + titers         0
+I221205 07:46:01.472014 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 199 + filter         -       -   82.9%  (score == utility)
+I221205 07:46:55.080975 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 200  flushing 28 stmt/txn fingerprints (235520 bytes) after 2.999µs
+I221205 07:48:36.705300 122 util/admission/work_queue.go:475 ⋮ [n1] 201  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:50:26.900936 511 sql/temporary_schema.go:514 ⋮ [n1] 202  running temporary object cleanup background job
+I221205 07:50:26.902445 511 sql/temporary_schema.go:559 ⋮ [n1] 203  found 0 temporary schemas
+I221205 07:50:26.902456 511 sql/temporary_schema.go:562 ⋮ [n1] 204  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 07:50:26.902963 511 sql/temporary_schema.go:563 ⋮ [n1] 205  completed temporary object cleanup job
+I221205 07:50:26.902970 511 sql/temporary_schema.go:646 ⋮ [n1] 206  temporary object cleaner next scheduled to run at 2022-12-05 08:20:26.005773421 +0000 UTC
+I221205 07:53:36.705678 120 util/admission/work_queue.go:475 ⋮ [n1] 207  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:53:36.705767 122 util/admission/work_queue.go:475 ⋮ [n1] 208  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 07:55:41.471606 206 gossip/pkg/gossip/gossip.go:401 ⋮ [n1] 209  NodeDescriptor set to ‹node_id:1 address:<network_field:"tcp" address_field:"localhost:26257" > attrs:<> locality:<> ServerVersion:<major_val:22 minor_val:1 patch:0 internal:0 > build_tag:"v22.1.10" started_at:1670219425885831607 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26257" > http_address:<network_field:"tcp" address_field:"localhost:8080" >›
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210  
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +    WAL         1    34 M       -   320 M       -       -       -       -   320 M       -       -       -     1.0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +      0         0     0 B    0.00   286 M     0 B       0     0 B       0   2.2 M       5     0 B       0     0.0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +      6         1   1.9 M       -   2.6 M     0 B       0     0 B       0   7.6 M       6   8.9 M       1     3.0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +  total         1   1.9 M       -   320 M     0 B       0     0 B       0   330 M      11   8.9 M       1     1.0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +  flush         5
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +compact         6     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +  ctype         6       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 + memtbl         1    64 M
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +zmemtbl         0     0 B
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +   ztbl         0     0 B
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 + bcache        45   1.6 M   99.1%  (score == hit-rate)
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 +  snaps         0       -       0  (score == earliest seq num)
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 + titers         0
+I221205 07:56:01.472550 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 210 + filter         -       -   82.9%  (score == utility)
+I221205 07:57:42.225426 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 211  flushing 42 stmt/txn fingerprints (286720 bytes) after 2.389µs
+I221205 08:00:28.122007 600 jobs/job_scheduler.go:179 ⋮ [n1] 212  Starting job for schedule 819680297888776193 (‹"sql-stats-compaction"›); scheduled to run at 2022-12-05 08:00:00 +0000 UTC; next run scheduled for 2022-12-05 09:00:00 +0000 UTC
+I221205 08:00:30.147433 540 jobs/adopt.go:106 ⋮ [n1] 213  claimed 1 jobs
+I221205 08:00:30.152350 105099 jobs/adopt.go:241 ⋮ [n1] 214  job 819713894398853121: resuming execution
+I221205 08:00:30.162356 105107 jobs/registry.go:1205 ⋮ [n1] 215  AUTO SQL STATS COMPACTION job 819713894398853121: stepping through state running with error: <nil>
+I221205 08:00:30.167839 105107 sql/compact_sql_stats.go:43 ⋮ [n1,job=819713894398853121] 216  starting sql stats compaction job
+I221205 08:00:30.186460 105107 sql/compact_sql_stats.go:104 ⋮ [n1,job=819713894398853121] 217  sql stats compaction job terminated with status = succeeded
+I221205 08:00:30.188405 105107 jobs/registry.go:1205 ⋮ [n1] 218  AUTO SQL STATS COMPACTION job 819713894398853121: stepping through state succeeded with error: <nil>
+W221205 09:11:59.363742 41 1@gossip/pkg/gossip/gossip.go:1531 ⋮ [n1] 219  no addresses found; use --join to specify a connected node
+I221205 09:11:59.352009 279 kv/kvserver/pkg/kv/kvserver/replica_rangefeed.go:705 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] 220  RangeFeed closed timestamp 1670227385.097487808,0 is behind by 1h8m54.251407851s
+I221205 09:12:01.208625 41 1@gossip/pkg/gossip/gossip.go:1547 ⋮ [n1] 221  node has connected to cluster via gossip
+W221205 09:12:08.764182 280 kv/kvserver/pkg/kv/kvserver/store_rebalancer.go:289 ⋮ [n1,s1,store-rebalancer] 222  StorePool missing descriptor for local store
+I221205 09:12:12.369535 600 jobs/job_scheduler.go:179 ⋮ [n1] 223  Starting job for schedule 819680297888776193 (‹"sql-stats-compaction"›); scheduled to run at 2022-12-05 09:00:00 +0000 UTC; next run scheduled for 2022-12-05 10:00:00 +0000 UTC
+I221205 09:12:22.942503 540 jobs/adopt.go:106 ⋮ [n1] 224  claimed 1 jobs
+I221205 09:12:22.949144 107965 jobs/adopt.go:241 ⋮ [n1] 225  job 819727998549032961: resuming execution
+I221205 09:12:22.954584 107968 jobs/registry.go:1205 ⋮ [n1] 226  AUTO SQL STATS COMPACTION job 819727998549032961: stepping through state running with error: <nil>
+I221205 09:12:22.958251 107968 sql/compact_sql_stats.go:43 ⋮ [n1,job=819727998549032961] 227  starting sql stats compaction job
+I221205 09:12:22.980517 107968 sql/compact_sql_stats.go:104 ⋮ [n1,job=819727998549032961] 228  sql stats compaction job terminated with status = succeeded
+I221205 09:12:22.982400 107968 jobs/registry.go:1205 ⋮ [n1] 229  AUTO SQL STATS COMPACTION job 819727998549032961: stepping through state succeeded with error: <nil>
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230  
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +    WAL         1   3.7 M       -   346 M       -       -       -       -   347 M       -       -       -     1.0
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +      0         0     0 B    0.00   343 M     0 B       0     0 B       0   2.7 M       6     0 B       0     0.0
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +      6         1   2.2 M       -   3.0 M     0 B       0     0 B       0   9.8 M       7    11 M       1     3.2
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +  total         1   2.2 M       -   347 M     0 B       0     0 B       0   359 M      13    11 M       1     1.0
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +  flush         6
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +compact         7     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +  ctype         7       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 + memtbl         1    64 M
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +zmemtbl         0     0 B
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +   ztbl         0     0 B
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 + bcache        27   1.1 M   98.9%  (score == hit-rate)
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 +  snaps         0       -       0  (score == earliest seq num)
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 + titers         0
+I221205 09:14:50.532065 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 230 + filter         -       -   83.5%  (score == utility)
+I221205 09:15:02.104570 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 231  flushing 47 stmt/txn fingerprints (307200 bytes) after 3.047µs
+I221205 09:24:27.722985 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 232  flushing 39 stmt/txn fingerprints (204800 bytes) after 3.054µs
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233  
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +    WAL         1    30 M       -   373 M       -       -       -       -   374 M       -       -       -     1.0
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +      0         0     0 B    0.00   343 M     0 B       0     0 B       0   2.7 M       6     0 B       0     0.0
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +      6         1   2.2 M       -   3.0 M     0 B       0     0 B       0   9.8 M       7    11 M       1     3.2
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +  total         1   2.2 M       -   374 M     0 B       0     0 B       0   386 M      13    11 M       1     1.0
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +  flush         6
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +compact         7     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +  ctype         7       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 + memtbl         1    64 M
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +zmemtbl         0     0 B
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +   ztbl         0     0 B
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 + bcache        43   1.6 M   99.0%  (score == hit-rate)
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 +  snaps         0       -       0  (score == earliest seq num)
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 + titers         3
+I221205 09:24:51.089899 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 233 + filter         -       -   83.5%  (score == utility)
+I221205 09:26:53.572522 245 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›,raft] 234  raft ready handling: 0.69s [append=0.19s, apply=0.04s, commit-batch-sync=0.02s, other=0.44s], wrote 159 KiB sync [append-ent=159 KiB (1), apply=159 KiB (1)]; node might be overloaded
+I221205 09:26:53.572464 230 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r35/1:‹/Table/{39-40}›,raft] 235  raft ready handling: 0.92s [append=0.13s, apply=0.27s, commit-batch-sync=0.12s, other=0.40s], wrote 466 B sync [append-ent=365 B (1), apply=365 B (1)]; node might be overloaded
+W221205 09:26:53.718088 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 236  slow heartbeat took 1.533800906s; err=<nil>
+W221205 09:26:57.821826 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 237  slow heartbeat took 1.330922896s; err=<nil>
+I221205 09:26:57.761186 258 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 238  raft ready handling: 0.64s [append=0.04s, apply=0.55s, commit-batch-sync=0.02s, other=0.03s], wrote 223 B sync [append-ent=123 B (1), apply=123 B (1)]; node might be overloaded
+I221205 09:26:59.506695 122 util/admission/work_queue.go:475 ⋮ [n1] 239  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+W221205 09:27:15.435382 280 kv/kvserver/pkg/kv/kvserver/store_rebalancer.go:289 ⋮ [n1,s1,store-rebalancer] 240  StorePool missing descriptor for local store
+W221205 09:27:15.431264 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 241  slow heartbeat took 14.255725873s; err=context deadline exceeded
+I221205 09:27:15.381939 279 kv/kvserver/pkg/kv/kvserver/replica_rangefeed.go:705 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] 242  RangeFeed closed timestamp 1670232418.158147548,0 is behind by 15.14360849s
+I221205 09:27:15.445378 247 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r35/1:‹/Table/{39-40}›,raft] 243  raft ready handling: 15.67s [append=0.45s, apply=12.00s, commit-batch-sync=0.08s, other=3.14s], wrote 466 B sync [append-ent=365 B (1), apply=365 B (1)]; node might be overloaded
+I221205 09:27:15.453037 255 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›,raft] 244  raft ready handling: 15.69s [append=0.30s, apply=14.86s, commit-batch-sync=0.16s, other=0.36s], wrote 310 B sync [append-ent=209 B (1), apply=209 B (1)]; node might be overloaded
+W221205 09:27:15.452123 41 1@gossip/pkg/gossip/gossip.go:1531 ⋮ [n1] 245  no addresses found; use --join to specify a connected node
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246  failed node liveness heartbeat: ‹operation "node liveness heartbeat" timed out after 14.353s (given timeout 4.5s)›: context deadline exceeded
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246 +(1) ‹operation "node liveness heartbeat" timed out after 14.353s (given timeout 4.5s)›
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246 +Wraps: (2) context deadline exceeded
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246 +Error types: (1) *contextutil.TimeoutError (2) context.deadlineExceededError
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246 +
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246 +An inability to maintain liveness will prevent a node from participating in a
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246 +cluster. If this problem persists, it may be a sign of resource starvation or
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246 +of network connectivity problems. For help troubleshooting, visit:
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246 +
+W221205 09:27:15.455771 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 246 +    https://www.cockroachlabs.com/docs/stable/cluster-setup-troubleshooting.html#node-liveness-issues
+I221205 09:27:17.747483 41 1@gossip/pkg/gossip/gossip.go:1547 ⋮ [n1] 247  node has connected to cluster via gossip
+I221205 09:29:15.480300 511 sql/temporary_schema.go:514 ⋮ [n1] 248  running temporary object cleanup background job
+I221205 09:29:15.484313 511 sql/temporary_schema.go:559 ⋮ [n1] 249  found 0 temporary schemas
+I221205 09:29:15.484328 511 sql/temporary_schema.go:562 ⋮ [n1] 250  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 09:29:15.484777 511 sql/temporary_schema.go:563 ⋮ [n1] 251  completed temporary object cleanup job
+I221205 09:29:15.484783 511 sql/temporary_schema.go:646 ⋮ [n1] 252  temporary object cleaner next scheduled to run at 2022-12-05 08:50:26.005773421 +0000 UTC
+I221205 09:29:15.484890 511 sql/temporary_schema.go:514 ⋮ [n1] 253  running temporary object cleanup background job
+I221205 09:29:15.485299 511 sql/temporary_schema.go:559 ⋮ [n1] 254  found 0 temporary schemas
+I221205 09:29:15.485309 511 sql/temporary_schema.go:562 ⋮ [n1] 255  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 09:29:15.485314 511 sql/temporary_schema.go:563 ⋮ [n1] 256  completed temporary object cleanup job
+I221205 09:29:15.485319 511 sql/temporary_schema.go:646 ⋮ [n1] 257  temporary object cleaner next scheduled to run at 2022-12-05 09:20:26.005773421 +0000 UTC
+I221205 09:29:15.485334 511 sql/temporary_schema.go:514 ⋮ [n1] 258  running temporary object cleanup background job
+I221205 09:29:15.485693 511 sql/temporary_schema.go:559 ⋮ [n1] 259  found 0 temporary schemas
+I221205 09:29:15.485700 511 sql/temporary_schema.go:562 ⋮ [n1] 260  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 09:29:15.485706 511 sql/temporary_schema.go:563 ⋮ [n1] 261  completed temporary object cleanup job
+I221205 09:29:15.485710 511 sql/temporary_schema.go:646 ⋮ [n1] 262  temporary object cleaner next scheduled to run at 2022-12-05 09:50:26.005773421 +0000 UTC
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263  
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +    WAL         1    57 M       -   399 M       -       -       -       -   400 M       -       -       -     1.0
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +      0         0     0 B    0.00   343 M     0 B       0     0 B       0   2.7 M       6     0 B       0     0.0
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +      6         1   2.2 M       -   3.0 M     0 B       0     0 B       0   9.8 M       7    11 M       1     3.2
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +  total         1   2.2 M       -   400 M     0 B       0     0 B       0   413 M      13    11 M       1     1.0
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +  flush         6
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +compact         7     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +  ctype         7       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 + memtbl         1    64 M
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +zmemtbl         0     0 B
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +   ztbl         0     0 B
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 + bcache        43   1.6 M   99.1%  (score == hit-rate)
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 +  snaps         0       -       0  (score == earliest seq num)
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 + titers         0
+I221205 09:34:50.946722 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 263 + filter         -       -   83.5%  (score == utility)
+I221205 09:35:38.645395 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 264  flushing 34 stmt/txn fingerprints (235520 bytes) after 4.926µs
+W221205 09:35:59.719070 41 1@gossip/pkg/gossip/gossip.go:1531 ⋮ [n1] 265  no addresses found; use --join to specify a connected node
+I221205 09:36:00.431864 269 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›,raft] 266  raft ready handling: 0.67s [append=0.07s, apply=0.35s, commit-batch-sync=0.01s, other=0.24s], wrote 310 B sync [append-ent=209 B (1), apply=209 B (1)]; node might be overloaded
+W221205 09:36:01.191210 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 267  slow heartbeat took 9.125722374s; err=aborted during Replica.Send: context deadline exceeded
+I221205 09:36:01.258028 220 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 268  raft ready handling: 0.91s [append=0.08s, apply=0.35s, commit-batch-sync=0.19s, other=0.29s], wrote 310 B sync [append-ent=209 B (1), apply=209 B (1)]; node might be overloaded
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269  failed node liveness heartbeat: ‹operation "node liveness heartbeat" timed out after 9.506s (given timeout 4.5s)›: aborted during Replica.Send: context deadline exceeded
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +(1) ‹operation "node liveness heartbeat" timed out after 9.506s (given timeout 4.5s)›
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +Wraps: (2)
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | (opaque error wrapper)
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | reportable 0:
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  |
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvserver.(*Replica).executeBatchWithConcurrencyRetries
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvserver/pkg/kv/kvserver/replica_send.go:397
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvserver.(*Replica).Send
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvserver/pkg/kv/kvserver/replica_send.go:156
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvserver.(*Store).Send
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvserver/pkg/kv/kvserver/store_send.go:197
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvserver.(*Stores).Send
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvserver/pkg/kv/kvserver/stores.go:191
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/server.(*Node).batchInternal.func1
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/server/node.go:1006
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/util/stop.(*Stopper).RunTaskWithErr
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/util/stop/stopper.go:344
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/server.(*Node).batchInternal
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/server/node.go:989
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/server.(*Node).Batch
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/server/node.go:1058
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/rpc.internalClientAdapter.Batch
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/rpc/pkg/rpc/context.go:609
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*grpcTransport).sendBatch
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/transport.go:209
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*grpcTransport).SendNext
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/transport.go:191
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*DistSender).sendToReplicas
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/dist_sender.go:2066
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*DistSender).sendPartialBatch
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/dist_sender.go:1604
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*DistSender).divideAndSendBatchToRanges
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/dist_sender.go:1206
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*DistSender).Send
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/dist_sender.go:832
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*txnLockGatekeeper).SendLocked
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/txn_lock_gatekeeper.go:82
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*txnMetricRecorder).SendLocked
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/txn_interceptor_metric_recorder.go:46
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*txnCommitter).SendLocked
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/txn_interceptor_committer.go:202
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*txnSpanRefresher).sendLockedWithRefreshAttempts
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/txn_interceptor_span_refresher.go:242
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*txnSpanRefresher).SendLocked
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/txn_interceptor_span_refresher.go:177
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*txnPipeliner).SendLocked
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/txn_interceptor_pipeliner.go:290
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*txnSeqNumAllocator).SendLocked
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/txn_interceptor_seq_num_allocator.go:105
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*txnHeartbeater).SendLocked
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/txn_interceptor_heartbeater.go:232
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord.(*TxnCoordSender).Send
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvclient/kvcoord/txn_coord_sender.go:532
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv.(*DB).sendUsingSender
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/db.go:985
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv.(*Txn).Send
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/txn.go:1124
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv.sendAndFill
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/db.go:830
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv.(*Txn).Run
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/txn.go:696
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv/kvserver/liveness.(*NodeLiveness).updateLivenessAttempt.func1
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/kvserver/liveness/liveness.go:1374
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv.runTxn.func1
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/db.go:949
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv.(*Txn).exec
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/txn.go:993
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | github.com/cockroachdb/cockroach/pkg/kv.runTxn
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +  | 	github.com/cockroachdb/cockroach/pkg/kv/db.go:948
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +Wraps: (3) aborted during Replica.Send
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +Wraps: (4) context deadline exceeded
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +Error types: (1) *contextutil.TimeoutError (2) *errbase.opaqueWrapper (3) *errutil.withPrefix (4) context.deadlineExceededError
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +An inability to maintain liveness will prevent a node from participating in a
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +cluster. If this problem persists, it may be a sign of resource starvation or
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +of network connectivity problems. For help troubleshooting, visit:
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +
+W221205 09:36:01.551548 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 269 +    https://www.cockroachlabs.com/docs/stable/cluster-setup-troubleshooting.html#node-liveness-issues
+I221205 09:36:01.823553 269 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›,raft] 270  raft ready handling: 0.57s [append=0.11s, apply=0.21s, commit-batch-sync=0.06s, other=0.18s], wrote 107 B sync [append-ent=9 B (1), apply=9 B (1)]; node might be overloaded
+I221205 09:36:01.884046 41 1@gossip/pkg/gossip/gossip.go:1547 ⋮ [n1] 271  node has connected to cluster via gossip
+I221205 09:36:02.581658 220 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 273  raft ready handling: 0.50s [append=0.00s, apply=0.27s, commit-batch-sync=0.00s, other=0.23s], wrote 107 B sync [append-ent=9 B (1), apply=9 B (1)]; node might be overloaded
+I221205 09:36:02.629014 269 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›,raft] 272  raft ready handling: 0.62s [append=0.05s, apply=0.36s, commit-batch-sync=0.07s, other=0.13s], wrote 310 B sync [append-ent=209 B (1), apply=209 B (1)]; node might be overloaded
+I221205 09:36:04.070295 223 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 274  raft ready handling: 0.87s [append=0.05s, apply=0.15s, commit-batch-sync=0.03s, other=0.63s], wrote 310 B sync [append-ent=209 B (1), apply=209 B (1)]; node might be overloaded
+I221205 09:36:05.938815 223 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 275  raft ready handling: 1.10s [append=0.07s, apply=0.69s, commit-batch-sync=0.15s, other=0.18s], wrote 280 B sync [append-ent=132 B (2), apply=132 B (2)]; node might be overloaded
+W221205 09:36:06.406259 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 276  slow heartbeat took 4.516665032s; err=context deadline exceeded
+W221205 09:36:06.588188 127403 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,s1,r35/1:‹/Table/{39-40}›] 277  slow heartbeat took 6.697800031s; err=<nil>
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279  failed node liveness heartbeat: ‹operation "node liveness heartbeat" timed out after 4.958s (given timeout 4.5s)›: context deadline exceeded
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279 +(1) ‹operation "node liveness heartbeat" timed out after 4.958s (given timeout 4.5s)›
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279 +Wraps: (2) context deadline exceeded
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279 +Error types: (1) *contextutil.TimeoutError (2) context.deadlineExceededError
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279 +
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279 +An inability to maintain liveness will prevent a node from participating in a
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279 +cluster. If this problem persists, it may be a sign of resource starvation or
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279 +of network connectivity problems. For help troubleshooting, visit:
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279 +
+W221205 09:36:06.922512 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 279 +    https://www.cockroachlabs.com/docs/stable/cluster-setup-troubleshooting.html#node-liveness-issues
+W221205 09:36:06.870858 127404 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›] 278  slow heartbeat took 5.578461714s; err=<nil>
+W221205 09:36:07.531825 127476 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,s1,r32/1:‹/Table/3{6-7}›] 281  slow heartbeat took 5.937228963s; err=<nil>
+W221205 09:36:07.593492 127376 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›] 280  slow heartbeat took 3.910801461s; err=<nil>
+I221205 09:36:08.329448 232 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›,raft] 282  raft ready handling: 1.37s [append=0.09s, apply=0.58s, commit-batch-sync=0.00s, other=0.70s], wrote 310 B sync [append-ent=209 B (1), apply=209 B (1)]; node might be overloaded
+W221205 09:36:09.516812 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 283  slow heartbeat took 2.128015987s; err=<nil>
+I221205 09:36:09.362032 227 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 284  raft ready handling: 0.65s [append=0.00s, apply=0.48s, commit-batch-sync=0.11s, other=0.05s], wrote 223 B sync [append-ent=123 B (1), apply=123 B (1)]; node might be overloaded
+I221205 09:36:12.873885 263 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›,raft] 285  raft ready handling: 1.04s [append=0.24s, apply=0.45s, commit-batch-sync=0.05s, other=0.29s], wrote 159 KiB sync [append-ent=159 KiB (1), apply=159 KiB (1)]; node might be overloaded
+I221205 09:36:13.845441 255 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›,raft] 286  raft ready handling: 0.55s [append=0.00s, apply=0.11s, commit-batch-sync=0.07s, other=0.36s], wrote 60 KiB sync [append-ent=60 KiB (1), apply=60 KiB (1)]; node might be overloaded
+I221205 09:36:14.667752 255 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›,raft] 287  raft ready handling: 0.63s [append=0.08s, apply=0.30s, commit-batch-sync=0.13s, other=0.12s], wrote 107 B sync [append-ent=9 B (1), apply=9 B (1)]; node might be overloaded
+I221205 09:36:15.850142 249 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›,raft] 288  raft ready handling: 1.19s [append=0.06s, apply=0.84s, commit-batch-sync=0.05s, other=0.24s], wrote 174 B sync [append-ent=76 B (1), apply=76 B (1)]; node might be overloaded
+I221205 09:36:17.323038 244 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›,raft] 289  raft ready handling: 2.19s [append=0.15s, apply=1.54s, commit-batch-sync=0.09s, other=0.41s], wrote 174 B sync [append-ent=76 B (1), apply=76 B (1)]; node might be overloaded
+I221205 09:36:17.371614 258 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 290  raft ready handling: 1.67s [append=0.10s, apply=1.05s, commit-batch-sync=0.12s, other=0.40s], wrote 223 B sync [append-ent=123 B (1), apply=123 B (1)]; node might be overloaded
+W221205 09:36:17.592612 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 291  slow heartbeat took 3.036474596s; err=<nil>
+I221205 09:36:17.655344 249 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›,raft] 292  raft ready handling: 0.71s [append=0.00s, apply=0.14s, commit-batch-sync=0.17s, other=0.40s], wrote 107 B sync [append-ent=9 B (1), apply=9 B (1)]; node might be overloaded
+I221205 09:36:19.105406 252 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r35/1:‹/Table/{39-40}›,raft] 293  raft ready handling: 0.75s [append=0.08s, apply=0.38s, commit-batch-sync=0.07s, other=0.22s], wrote 348 B sync [append-ent=247 B (1), apply=247 B (1)]; node might be overloaded
+I221205 09:36:20.624580 252 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r35/1:‹/Table/{39-40}›,raft] 294  raft ready handling: 0.87s [append=0.01s, apply=0.45s, commit-batch-sync=0.08s, other=0.33s], wrote 346 B sync [append-ent=245 B (1), apply=245 B (1)]; node might be overloaded
+W221205 09:36:21.445218 280 kv/kvserver/pkg/kv/kvserver/store_rebalancer.go:289 ⋮ [n1,s1,store-rebalancer] 295  StorePool missing descriptor for local store
+I221205 09:36:21.431397 216 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 296  raft ready handling: 1.62s [append=0.01s, apply=1.39s, commit-batch-sync=0.08s, other=0.14s], wrote 223 B sync [append-ent=123 B (1), apply=123 B (1)]; node might be overloaded
+W221205 09:36:22.539034 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 297  slow heartbeat took 3.537081488s; err=<nil>
+I221205 09:36:59.506041 120 util/admission/work_queue.go:475 ⋮ [n1] 298  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 09:36:59.506038 292 util/admission/work_queue.go:475 ⋮ [-] 299  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 09:41:59.606052 292 util/admission/work_queue.go:475 ⋮ [-] 300  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 09:41:59.606037 120 util/admission/work_queue.go:475 ⋮ [n1] 301  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302  
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +    WAL         1    26 M       -   426 M       -       -       -       -   427 M       -       -       -     1.0
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +      0         0     0 B    0.00   400 M     0 B       0     0 B       0   3.1 M       7     0 B       0     0.0
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +      6         1   2.4 M       -   3.5 M     0 B       0     0 B       0    12 M       8    14 M       1     3.5
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +  total         1   2.4 M       -   427 M     0 B       0     0 B       0   442 M      15    14 M       1     1.0
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +  flush         7
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +compact         8     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +  ctype         8       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 + memtbl         1    64 M
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +zmemtbl         0     0 B
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +   ztbl         0     0 B
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 + bcache        45   1.7 M   98.9%  (score == hit-rate)
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 +  snaps         0       -       0  (score == earliest seq num)
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 + titers         0
+I221205 09:44:50.946736 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 302 + filter         -       -   83.5%  (score == utility)
+I221205 09:46:18.824057 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 303  flushing 30 stmt/txn fingerprints (235520 bytes) after 3.36µs
+I221205 09:50:26.006903 511 sql/temporary_schema.go:514 ⋮ [n1] 304  running temporary object cleanup background job
+I221205 09:50:26.008367 511 sql/temporary_schema.go:559 ⋮ [n1] 305  found 0 temporary schemas
+I221205 09:50:26.008392 511 sql/temporary_schema.go:562 ⋮ [n1] 306  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 09:50:26.008409 511 sql/temporary_schema.go:563 ⋮ [n1] 307  completed temporary object cleanup job
+I221205 09:50:26.008431 511 sql/temporary_schema.go:646 ⋮ [n1] 308  temporary object cleaner next scheduled to run at 2022-12-05 10:20:26.005773421 +0000 UTC
+I221205 09:51:59.805048 120 util/admission/work_queue.go:475 ⋮ [n1] 309  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 09:51:59.805191 292 util/admission/work_queue.go:475 ⋮ [-] 310  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311  
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +    WAL         1    53 M       -   452 M       -       -       -       -   453 M       -       -       -     1.0
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +      0         0     0 B    0.00   400 M     0 B       0     0 B       0   3.1 M       7     0 B       0     0.0
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +      6         1   2.4 M       -   3.5 M     0 B       0     0 B       0    12 M       8    14 M       1     3.5
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +  total         1   2.4 M       -   453 M     0 B       0     0 B       0   469 M      15    14 M       1     1.0
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +  flush         7
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +compact         8     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +  ctype         8       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 + memtbl         1    64 M
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +zmemtbl         0     0 B
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +   ztbl         0     0 B
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 + bcache        46   1.7 M   99.0%  (score == hit-rate)
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 +  snaps         0       -       0  (score == earliest seq num)
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 + titers         0
+I221205 09:54:50.946751 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 311 + filter         -       -   83.5%  (score == utility)
+I221205 09:56:20.155749 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 312  flushing 26 stmt/txn fingerprints (225280 bytes) after 1.596µs
+I221205 10:00:28.441283 600 jobs/job_scheduler.go:179 ⋮ [n1] 313  Starting job for schedule 819680297888776193 (‹"sql-stats-compaction"›); scheduled to run at 2022-12-05 10:00:00 +0000 UTC; next run scheduled for 2022-12-05 11:00:00 +0000 UTC
+I221205 10:00:50.693502 540 jobs/adopt.go:106 ⋮ [n1] 314  claimed 1 jobs
+I221205 10:00:50.697613 147626 jobs/adopt.go:241 ⋮ [n1] 315  job 819737488396615681: resuming execution
+I221205 10:00:50.702814 147629 jobs/registry.go:1205 ⋮ [n1] 316  AUTO SQL STATS COMPACTION job 819737488396615681: stepping through state running with error: <nil>
+I221205 10:00:50.706143 147629 sql/compact_sql_stats.go:43 ⋮ [n1,job=819737488396615681] 317  starting sql stats compaction job
+I221205 10:00:50.722537 147629 sql/compact_sql_stats.go:104 ⋮ [n1,job=819737488396615681] 318  sql stats compaction job terminated with status = succeeded
+I221205 10:00:50.724465 147629 jobs/registry.go:1205 ⋮ [n1] 319  AUTO SQL STATS COMPACTION job 819737488396615681: stepping through state succeeded with error: <nil>
+I221205 10:04:30.945918 206 gossip/pkg/gossip/gossip.go:401 ⋮ [n1] 320  NodeDescriptor set to ‹node_id:1 address:<network_field:"tcp" address_field:"localhost:26257" > attrs:<> locality:<> ServerVersion:<major_val:22 minor_val:1 patch:0 internal:0 > build_tag:"v22.1.10" started_at:1670219425885831607 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26257" > http_address:<network_field:"tcp" address_field:"localhost:8080" >›
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321  
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +    WAL         1    22 M       -   479 M       -       -       -       -   480 M       -       -       -     1.0
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +      0         0     0 B    0.00   458 M     0 B       0     0 B       0   3.6 M       8     0 B       0     0.0
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +      6         1   2.7 M       -   3.9 M     0 B       0     0 B       0    15 M       9    17 M       1     3.8
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +  total         1   2.7 M       -   480 M     0 B       0     0 B       0   498 M      17    17 M       1     1.0
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +  flush         8
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +compact         9     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +  ctype         9       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 + memtbl         1    64 M
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +zmemtbl         0     0 B
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +   ztbl         0     0 B
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 + bcache        69   2.4 M   98.8%  (score == hit-rate)
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 +  snaps         0       -       0  (score == earliest seq num)
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 + titers         0
+I221205 10:04:50.945761 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 321 + filter         -       -   83.5%  (score == utility)
+I221205 10:06:46.491142 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 322  flushing 58 stmt/txn fingerprints (368640 bytes) after 2.328µs
+I221205 10:06:59.905576 292 util/admission/work_queue.go:475 ⋮ [-] 323  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:06:59.905633 120 util/admission/work_queue.go:475 ⋮ [n1] 324  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:11:59.905651 122 util/admission/work_queue.go:475 ⋮ [n1] 325  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326  
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +    WAL         1    49 M       -   505 M       -       -       -       -   506 M       -       -       -     1.0
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +      0         0     0 B    0.00   458 M     0 B       0     0 B       0   3.6 M       8     0 B       0     0.0
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +      6         1   2.7 M       -   3.9 M     0 B       0     0 B       0    15 M       9    17 M       1     3.8
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +  total         1   2.7 M       -   506 M     0 B       0     0 B       0   525 M      17    17 M       1     1.0
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +  flush         8
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +compact         9     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +  ctype         9       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 + memtbl         1    64 M
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +zmemtbl         0     0 B
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +   ztbl         0     0 B
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 + bcache        70   2.4 M   98.9%  (score == hit-rate)
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 +  snaps         0       -       0  (score == earliest seq num)
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 + titers         0
+I221205 10:14:50.945836 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 326 + filter         -       -   83.5%  (score == utility)
+I221205 10:16:41.224528 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 327  flushing 26 stmt/txn fingerprints (225280 bytes) after 3.218µs
+I221205 10:17:00.005576 122 util/admission/work_queue.go:475 ⋮ [n1] 328  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:20:26.008771 511 sql/temporary_schema.go:514 ⋮ [n1] 329  running temporary object cleanup background job
+I221205 10:20:26.011280 511 sql/temporary_schema.go:559 ⋮ [n1] 330  found 0 temporary schemas
+I221205 10:20:26.011304 511 sql/temporary_schema.go:562 ⋮ [n1] 331  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 10:20:26.011789 511 sql/temporary_schema.go:563 ⋮ [n1] 332  completed temporary object cleanup job
+I221205 10:20:26.012370 511 sql/temporary_schema.go:646 ⋮ [n1] 333  temporary object cleaner next scheduled to run at 2022-12-05 10:50:26.005773421 +0000 UTC
+I221205 10:22:00.105325 120 util/admission/work_queue.go:475 ⋮ [n1] 335  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:22:00.105295 122 util/admission/work_queue.go:475 ⋮ [n1] 334  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336  
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +    WAL         1    18 M       -   532 M       -       -       -       -   533 M       -       -       -     1.0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +      0         0     0 B    0.00   515 M     0 B       0     0 B       0   4.1 M       9     0 B       0     0.0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +      6         1   3.0 M       -   4.4 M     0 B       0     0 B       0    18 M      10    20 M       1     4.0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +  total         1   3.0 M       -   533 M     0 B       0     0 B       0   555 M      19    20 M       1     1.0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +  flush         9
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +compact        10     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +  ctype        10       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 + memtbl         1    64 M
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +zmemtbl         0     0 B
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +   ztbl         0     0 B
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 + bcache        30   1.3 M   98.7%  (score == hit-rate)
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 +  snaps         0       -       0  (score == earliest seq num)
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 + titers         0
+I221205 10:24:50.946864 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 336 + filter         -       -   83.5%  (score == utility)
+I221205 10:27:49.019530 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 337  flushing 26 stmt/txn fingerprints (225280 bytes) after 7.697µs
+W221205 10:33:37.665844 41 1@gossip/pkg/gossip/gossip.go:1531 ⋮ [n1] 338  no addresses found; use --join to specify a connected node
+W221205 10:33:42.105242 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 339  slow heartbeat took 21.059766804s; err=context deadline exceeded
+W221205 10:33:45.400506 280 kv/kvserver/pkg/kv/kvserver/store_rebalancer.go:289 ⋮ [n1,s1,store-rebalancer] 340  StorePool missing descriptor for local store
+I221205 10:33:30.086449 279 kv/kvserver/pkg/kv/kvserver/replica_rangefeed.go:705 ⋮ [n1,s1,r43/1:‹/Table/{47-50}›] 341  RangeFeed closed timestamp 1670236394.099536519,0 is behind by 15.518731981s
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342  failed node liveness heartbeat: ‹operation "node liveness heartbeat" timed out after 30.286s (given timeout 4.5s)›: context deadline exceeded
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342 +(1) ‹operation "node liveness heartbeat" timed out after 30.286s (given timeout 4.5s)›
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342 +Wraps: (2) context deadline exceeded
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342 +Error types: (1) *contextutil.TimeoutError (2) context.deadlineExceededError
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342 +
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342 +An inability to maintain liveness will prevent a node from participating in a
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342 +cluster. If this problem persists, it may be a sign of resource starvation or
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342 +of network connectivity problems. For help troubleshooting, visit:
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342 +
+W221205 10:33:49.831531 294 kv/kvserver/liveness/liveness.go:785 ⋮ [n1,liveness-hb] 342 +    https://www.cockroachlabs.com/docs/stable/cluster-setup-troubleshooting.html#node-liveness-issues
+I221205 10:33:49.803336 279 kv/kvserver/pkg/kv/kvserver/replica_rangefeed.go:705 ⋮ [n1,s1,r42/1:‹/Table/4{6-7}›] 343  RangeFeed closed timestamp 1670236394.099536519,0 is behind by 35.700189946s
+I221205 10:33:51.355446 41 1@gossip/pkg/gossip/gossip.go:1547 ⋮ [n1] 344  node has connected to cluster via gossip
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345  
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +    WAL         1    45 M       -   558 M       -       -       -       -   559 M       -       -       -     1.0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +      0         0     0 B    0.00   515 M     0 B       0     0 B       0   4.1 M       9     0 B       0     0.0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +      6         1   3.0 M       -   4.4 M     0 B       0     0 B       0    18 M      10    20 M       1     4.0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +  total         1   3.0 M       -   559 M     0 B       0     0 B       0   581 M      19    20 M       1     1.0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +  flush         9
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +compact        10     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +  ctype        10       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 + memtbl         1    64 M
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +zmemtbl         0     0 B
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +   ztbl         0     0 B
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 + bcache        49   1.8 M   98.8%  (score == hit-rate)
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 +  snaps         0       -       0  (score == earliest seq num)
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 + titers         0
+I221205 10:35:00.945725 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 345 + filter         -       -   83.5%  (score == utility)
+I221205 10:37:00.205776 120 util/admission/work_queue.go:475 ⋮ [n1] 347  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:37:00.205872 292 util/admission/work_queue.go:475 ⋮ [-] 346  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:37:00.205978 122 util/admission/work_queue.go:475 ⋮ [n1] 348  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:38:52.854290 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 349  flushing 28 stmt/txn fingerprints (235520 bytes) after 1.725µs
+I221205 10:42:00.305439 120 util/admission/work_queue.go:475 ⋮ [n1] 350  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:42:00.305448 122 util/admission/work_queue.go:475 ⋮ [n1] 351  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352  
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +    WAL         1    14 M       -   585 M       -       -       -       -   586 M       -       -       -     1.0
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +      0         0     0 B    0.00   572 M     0 B       0     0 B       0   4.6 M      10     0 B       0     0.0
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +      6         1   3.2 M       -   4.9 M     0 B       0     0 B       0    21 M      11    23 M       1     4.3
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +  total         1   3.2 M       -   586 M     0 B       0     0 B       0   612 M      21    23 M       1     1.0
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +  flush        10
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +compact        11     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +  ctype        11       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 + memtbl         1    64 M
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +zmemtbl         0     0 B
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +   ztbl         0     0 B
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 + bcache        31   1.3 M   98.7%  (score == hit-rate)
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 +  snaps         0       -       0  (score == earliest seq num)
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 + titers         0
+I221205 10:45:00.945786 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 352 + filter         -       -   83.5%  (score == utility)
+I221205 10:49:33.388018 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 353  flushing 32 stmt/txn fingerprints (235520 bytes) after 1.204µs
+I221205 10:50:26.005918 511 sql/temporary_schema.go:514 ⋮ [n1] 354  running temporary object cleanup background job
+I221205 10:50:26.007343 511 sql/temporary_schema.go:559 ⋮ [n1] 355  found 0 temporary schemas
+I221205 10:50:26.007365 511 sql/temporary_schema.go:562 ⋮ [n1] 356  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 10:50:26.007379 511 sql/temporary_schema.go:563 ⋮ [n1] 357  completed temporary object cleanup job
+I221205 10:50:26.007391 511 sql/temporary_schema.go:646 ⋮ [n1] 358  temporary object cleaner next scheduled to run at 2022-12-05 11:20:26.005773421 +0000 UTC
+I221205 10:52:00.405097 122 util/admission/work_queue.go:475 ⋮ [n1] 359  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360  
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +    WAL         1    41 M       -   611 M       -       -       -       -   612 M       -       -       -     1.0
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +      0         0     0 B    0.00   572 M     0 B       0     0 B       0   4.6 M      10     0 B       0     0.0
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +      6         1   3.2 M       -   4.9 M     0 B       0     0 B       0    21 M      11    23 M       1     4.3
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +  total         1   3.2 M       -   612 M     0 B       0     0 B       0   638 M      21    23 M       1     1.0
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +  flush        10
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +compact        11     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +  ctype        11       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 + memtbl         1    64 M
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +zmemtbl         0     0 B
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +   ztbl         0     0 B
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 + bcache        51   1.9 M   98.7%  (score == hit-rate)
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 +  snaps         0       -       0  (score == earliest seq num)
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 + titers         0
+I221205 10:55:00.946240 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 360 + filter         -       -   83.5%  (score == utility)
+I221205 10:57:00.406119 122 util/admission/work_queue.go:475 ⋮ [n1] 361  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:00:05.952312 600 jobs/job_scheduler.go:179 ⋮ [n1] 362  Starting job for schedule 819680297888776193 (‹"sql-stats-compaction"›); scheduled to run at 2022-12-05 11:00:00 +0000 UTC; next run scheduled for 2022-12-05 12:00:00 +0000 UTC
+I221205 11:00:09.366865 540 jobs/adopt.go:106 ⋮ [n1] 363  claimed 1 jobs
+I221205 11:00:09.371593 195789 jobs/adopt.go:241 ⋮ [n1] 364  job 819749211184824321: resuming execution
+I221205 11:00:09.379014 195792 jobs/registry.go:1205 ⋮ [n1] 365  AUTO SQL STATS COMPACTION job 819749211184824321: stepping through state running with error: <nil>
+I221205 11:00:09.383439 195792 sql/compact_sql_stats.go:43 ⋮ [n1,job=819749211184824321] 366  starting sql stats compaction job
+I221205 11:00:09.404598 195792 sql/compact_sql_stats.go:104 ⋮ [n1,job=819749211184824321] 367  sql stats compaction job terminated with status = succeeded
+I221205 11:00:09.405849 195792 jobs/registry.go:1205 ⋮ [n1] 368  AUTO SQL STATS COMPACTION job 819749211184824321: stepping through state succeeded with error: <nil>
+I221205 11:00:18.975244 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 369  flushing 56 stmt/txn fingerprints (337920 bytes) after 2.856µs
+I221205 11:04:30.945179 206 gossip/pkg/gossip/gossip.go:401 ⋮ [n1] 370  NodeDescriptor set to ‹node_id:1 address:<network_field:"tcp" address_field:"localhost:26257" > attrs:<> locality:<> ServerVersion:<major_val:22 minor_val:1 patch:0 internal:0 > build_tag:"v22.1.10" started_at:1670219425885831607 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26257" > http_address:<network_field:"tcp" address_field:"localhost:8080" >›
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371  
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +    WAL         1    10 M       -   638 M       -       -       -       -   639 M       -       -       -     1.0
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +      0         0     0 B    0.00   629 M     0 B       0     0 B       0   5.0 M      11     0 B       0     0.0
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +      6         1   3.4 M       -   5.4 M     0 B       0     0 B       0    25 M      12    27 M       1     4.6
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +  total         1   3.4 M       -   639 M     0 B       0     0 B       0   669 M      23    27 M       1     1.0
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +  flush        11
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +compact        12     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +  ctype        12       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 + memtbl         1    64 M
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +zmemtbl         0     0 B
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +   ztbl         0     0 B
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 + bcache        30   1.2 M   98.6%  (score == hit-rate)
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 +  snaps         0       -       0  (score == earliest seq num)
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 + titers         0
+I221205 11:05:00.945982 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 371 + filter         -       -   83.5%  (score == utility)
+I221205 11:07:00.605809 120 util/admission/work_queue.go:475 ⋮ [n1] 373  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:07:00.605787 122 util/admission/work_queue.go:475 ⋮ [n1] 372  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:09:18.485035 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 374  flushing 36 stmt/txn fingerprints (276480 bytes) after 2.507µs
+I221205 11:12:00.706098 122 util/admission/work_queue.go:475 ⋮ [n1] 375  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:12:00.706197 120 util/admission/work_queue.go:475 ⋮ [n1] 376  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377  
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +    WAL         1    37 M       -   664 M       -       -       -       -   666 M       -       -       -     1.0
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +      0         0     0 B    0.00   629 M     0 B       0     0 B       0   5.0 M      11     0 B       0     0.0
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +      6         1   3.4 M       -   5.4 M     0 B       0     0 B       0    25 M      12    27 M       1     4.6
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +  total         1   3.4 M       -   666 M     0 B       0     0 B       0   695 M      23    27 M       1     1.0
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +  flush        11
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +compact        12     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +  ctype        12       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 + memtbl         1    64 M
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +zmemtbl         0     0 B
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +   ztbl         0     0 B
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 + bcache        48   1.8 M   98.6%  (score == hit-rate)
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 +  snaps         0       -       0  (score == earliest seq num)
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 + titers         0
+I221205 11:15:00.945889 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 377 + filter         -       -   83.5%  (score == utility)
+I221205 11:17:00.805983 122 util/admission/work_queue.go:475 ⋮ [n1] 378  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:17:00.806029 120 util/admission/work_queue.go:475 ⋮ [n1] 379  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:18:31.294764 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 380  flushing 28 stmt/txn fingerprints (235520 bytes) after 2.84µs
+I221205 11:20:26.005851 511 sql/temporary_schema.go:514 ⋮ [n1] 381  running temporary object cleanup background job
+I221205 11:20:26.007357 511 sql/temporary_schema.go:559 ⋮ [n1] 382  found 0 temporary schemas
+I221205 11:20:26.007386 511 sql/temporary_schema.go:562 ⋮ [n1] 383  early exiting temporary schema cleaner as no temporary schemas were found
+I221205 11:20:26.007406 511 sql/temporary_schema.go:563 ⋮ [n1] 384  completed temporary object cleanup job
+I221205 11:20:26.007421 511 sql/temporary_schema.go:646 ⋮ [n1] 385  temporary object cleaner next scheduled to run at 2022-12-05 11:50:26.005773421 +0000 UTC
+I221205 11:22:00.905755 120 util/admission/work_queue.go:475 ⋮ [n1] 387  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:22:00.905755 122 util/admission/work_queue.go:475 ⋮ [n1] 386  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388  
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +    WAL         1   6.0 M       -   691 M       -       -       -       -   692 M       -       -       -     1.0
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +      0         0     0 B    0.00   686 M     0 B       0     0 B       0   5.4 M      12     0 B       0     0.0
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +      6         1   3.7 M       -   5.8 M     0 B       0     0 B       0    28 M      13    31 M       1     4.9
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +  total         1   3.7 M       -   692 M     0 B       0     0 B       0   726 M      25    31 M       1     1.0
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +  flush        12
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +compact        13     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +  ctype        13       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 + memtbl         1    64 M
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +zmemtbl         0     0 B
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +   ztbl         0     0 B
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 + bcache        27   1.0 M   98.5%  (score == hit-rate)
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 +  snaps         0       -       0  (score == earliest seq num)
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 + titers         0
+I221205 11:25:00.946344 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 388 + filter         -       -   80.1%  (score == utility)
+I221205 11:27:00.905972 120 util/admission/work_queue.go:475 ⋮ [n1] 389  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:27:00.906004 122 util/admission/work_queue.go:475 ⋮ [n1] 390  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:27:31.419904 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 391  flushing 28 stmt/txn fingerprints (235520 bytes) after 1.922µs
+I221205 11:32:01.006163 122 util/admission/work_queue.go:475 ⋮ [n1] 392  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:32:01.006273 120 util/admission/work_queue.go:475 ⋮ [n1] 393  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394  
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +    WAL         1    33 M       -   717 M       -       -       -       -   719 M       -       -       -     1.0
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +      0         0     0 B    0.00   686 M     0 B       0     0 B       0   5.4 M      12     0 B       0     0.0
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +      6         1   3.7 M       -   5.8 M     0 B       0     0 B       0    28 M      13    31 M       1     4.9
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +  total         1   3.7 M       -   719 M     0 B       0     0 B       0   752 M      25    31 M       1     1.0
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +  flush        12
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +compact        13     0 B   346 K       0          (size == estimated-debt, score = in-progress-bytes, in = num-in-progress)
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +  ctype        13       0       0       0       0       0  (default, delete, elision, move, read, rewrite)
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 + memtbl         1    64 M
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +zmemtbl         0     0 B
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +   ztbl         0     0 B
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 + bcache        46   1.6 M   98.6%  (score == hit-rate)
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 + tcache         1   680 B  100.0%  (score == hit-rate)
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 +  snaps         0       -       0  (score == earliest seq num)
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 + titers         0
+I221205 11:35:00.946538 204 kv/kvserver/pkg/kv/kvserver/store.go:3261 ⋮ [n1,s1] 394 + filter         -       -   80.1%  (score == utility)
+I221205 11:37:01.105880 292 util/admission/work_queue.go:475 ⋮ [-] 395  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:37:01.105920 122 util/admission/work_queue.go:475 ⋮ [n1] 396  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:37:01.105974 120 util/admission/work_queue.go:475 ⋮ [n1] 397  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:38:43.401213 513 sql/sqlstats/persistedsqlstats/pkg/sql/sqlstats/persistedsqlstats/flush.go:68 ⋮ [n1] 398  flushing 26 stmt/txn fingerprints (225280 bytes) after 2.736µs
+I221205 11:42:01.205829 122 util/admission/work_queue.go:475 ⋮ [n1] 399  ‹sql-kv-response›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:42:01.205870 292 util/admission/work_queue.go:475 ⋮ [-] 400  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:42:01.205877 120 util/admission/work_queue.go:475 ⋮ [n1] 401  ‹kv›: FIFO threshold for tenant 1 ‹is› -128
+I221205 11:43:15.227900 294 kv/kvserver/liveness/liveness.go:1305 ⋮ [n1,liveness-hb] 402  retrying liveness update after ‹liveness.errRetryLiveness›: ‹could not commit in one phase as requested›
+I221205 11:43:16.696490 48 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 403  raft ready handling: 0.69s [append=0.06s, apply=0.42s, commit-batch-sync=0.02s, other=0.19s], wrote 223 B sync [append-ent=123 B (1), apply=123 B (1)]; node might be overloaded
+W221205 11:43:16.932075 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 404  slow heartbeat took 3.926921859s; err=<nil>
+W221205 11:43:18.963786 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 405  slow heartbeat took 1.484833604s; err=<nil>
+I221205 11:43:18.887120 266 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 406  raft ready handling: 0.66s [append=0.02s, apply=0.40s, commit-batch-sync=0.04s, other=0.20s], wrote 223 B sync [append-ent=123 B (1), apply=123 B (1)]; node might be overloaded
+W221205 11:43:37.814077 294 kv/kvserver/liveness/liveness.go:883 ⋮ [n1,liveness-hb] 408  slow heartbeat took 2.323951755s; err=<nil>
+I221205 11:43:37.644501 268 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›,raft] 407  raft ready handling: 1.07s [append=0.03s, apply=0.87s, commit-batch-sync=0.04s, other=0.13s], wrote 280 B sync [append-ent=132 B (2), apply=132 B (2)]; node might be overloaded
+I221205 11:43:39.459659 232 kv/kvserver/pkg/kv/kvserver/store_raft.go:522 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›,raft] 409  raft ready handling: 0.65s [append=0.09s, apply=0.34s, commit-batch-sync=0.03s, other=0.19s], wrote 310 B sync [append-ent=209 B (1), apply=209 B (1)]; node might be overloaded

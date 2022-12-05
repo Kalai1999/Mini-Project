@@ -1,0 +1,33 @@
+I221205 05:09:35.022392 32 util/log/file_sync_buffer.go:238 ⋮ [config]   file created at: 2022/12/05 05:09:35
+I221205 05:09:35.022412 32 util/log/file_sync_buffer.go:238 ⋮ [config]   running on machine: ‹ecomkalaivanibm520›
+I221205 05:09:35.022423 32 util/log/file_sync_buffer.go:238 ⋮ [config]   binary: CockroachDB CCL v22.1.10 (x86_64-pc-linux-gnu, built 2022/10/27 19:46:05, go1.17.11)
+I221205 05:09:35.022434 32 util/log/file_sync_buffer.go:238 ⋮ [config]   arguments: [‹cockroach› ‹start-single-node› ‹--listen-addr=localhost:26257› ‹--http-addr=localhost:8080› ‹--insecure›]
+I221205 05:09:35.022456 32 util/log/file_sync_buffer.go:238 ⋮ [config]   log format (utf8=✓): crdb-v2
+I221205 05:09:35.022464 32 util/log/file_sync_buffer.go:238 ⋮ [config]   line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid [chan@]file:line redactionmark \[tags\] [counter] msg
+I221205 05:09:35.022158 32 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:649 ⋮ [n?,pebble,s?] 1  [JOB 1] MANIFEST created 000001
+I221205 05:09:35.024994 32 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n?,pebble,s?] 2  [JOB 1] WAL created 000002
+I221205 05:09:35.028118 117 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:669 ⋮ [n?,pebble,s?] 3  [JOB 2] all initial table stats loaded
+I221205 05:09:35.038916 32 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:649 ⋮ [n?,pebble,s?] 4  [JOB 1] MANIFEST created 000001
+I221205 05:09:35.040960 32 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n?,pebble,s?] 5  [JOB 1] WAL created 000002
+I221205 05:09:35.043288 148 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:669 ⋮ [n?,pebble,stemp] 6  [JOB 2] all initial table stats loaded
+I221205 05:09:35.080651 32 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:645 ⋮ [n?,pebble,s?] 7  upgraded to format version: ‹002›
+I221205 05:09:35.084505 32 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:645 ⋮ [n?,pebble,s?] 8  upgraded to format version: ‹003›
+I221205 05:09:35.085863 32 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:645 ⋮ [n?,pebble,s?] 9  upgraded to format version: ‹004›
+I221205 05:09:35.091889 32 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:645 ⋮ [n?,pebble,s?] 10  upgraded to format version: ‹005›
+I221205 05:09:35.092861 32 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:645 ⋮ [n?,pebble,s?] 11  upgraded to format version: ‹006›
+I221205 05:09:35.322892 264 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n1,pebble,s1] 12  [JOB 4] WAL created 000004
+I221205 05:09:35.436612 282 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n1,pebble,s1] 13  [JOB 5] WAL created 000005
+I221205 05:09:45.455006 249 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n1,pebble,s1] 14  [JOB 6] WAL created 000006
+I221205 05:10:25.457567 266 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n1,pebble,s1] 15  [JOB 7] WAL created 000007
+I221205 05:11:35.459058 238 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n1,pebble,s1] 16  [JOB 8] WAL created 000008
+I221205 05:14:15.460556 242 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n1,pebble,s1] 17  [JOB 9] WAL created 000009
+I221205 05:19:35.460964 271 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n1,pebble,s1] 18  [JOB 10] WAL created 000010
+I221205 05:29:55.449800 279 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:677 ⋮ [n1,pebble,s1] 19  [JOB 11] WAL created 000011
+I221205 05:29:55.452281 20451 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:637 ⋮ [n1,pebble,s1] 20  [JOB 12] flushing 8 memtables to L0
+I221205 05:29:55.454702 20451 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:657 ⋮ [n1,pebble,s1] 21  [JOB 12] flushing: sstable created 000012
+I221205 05:29:55.575763 20451 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:641 ⋮ [n1,pebble,s1] 22  [JOB 12] flushed 8 memtables to L0 [000012] (595 K), in 0.1s (0.1s total), output rate 4.8 M/s
+I221205 05:29:55.577207 20455 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:681 ⋮ [n1,pebble,s1] 23  [JOB 12] WAL deleted 000008
+I221205 05:29:55.577501 20455 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:681 ⋮ [n1,pebble,s1] 24  [JOB 12] WAL deleted 000009
+I221205 05:29:55.578708 20455 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:681 ⋮ [n1,pebble,s1] 25  [JOB 12] WAL deleted 000010
+I221205 05:29:55.580750 20456 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:625 ⋮ [n1,pebble,s1] 26  [JOB 13] compacting(move) L0 [000012] (595 K) + L6 [] (0 B)
+I221205 05:29:55.582418 20456 3@github.com/cockroachdb/pebble/external/com_github_cockroachdb_pebble/event.go:629 ⋮ [n1,pebble,s1] 27  [JOB 13] compacted(move) L0 [000012] (595 K) + L6 [] (0 B) -> L6 [000012] (595 K), in 0.0s (0.0s total), output rate 14 G/s

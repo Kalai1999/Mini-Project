@@ -1,0 +1,290 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form-row{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 60px 10px 70px;
+}
+.outline-card{
+    width:fit-content;
+    margin: 5% 16%;
+    padding: 50px 5px;
+    box-shadow: 0px 2px 4px 1px gray;
+    height: fit-content;
+    border-radius: 25px;
+    background-color: white;
+}
+.card-head{
+    font-size: 24px;
+    margin-bottom: 18px;
+    font-weight: bolder;
+
+}
+.group{
+    display: flex;
+    flex-direction:column ;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+.icon-button{
+    display: flex;
+    flex-direction: row;
+}
+.icon-button div{
+    margin :2px 10px;
+    text-align: center;
+}
+/* .in-button{
+    border:1px solid  rgb(81, 54, 255);
+    padding:5px 10px;
+    text-align: left;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgb(81, 54, 255);
+    color: white;
+    margin: 20px 95px;
+    float: right;
+    
+} */
+.input-text{
+    border:1px solid grey; 
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+.text-label{
+    font-size: 17px ;
+    padding:2px 20px 0px 5px ;
+    width: 290px;
+    text-align: left;
+}
+.dropdown{
+    background-color: black;
+    color:white;
+}
+.product-top{
+    margin-top: 35px;
+    margin-bottom: 75px;
+}
+.search-block{
+    margin : 50px 100px;
+    margin-bottom: 50px; 
+}
+.searchbar{
+    margin: 25px 0px;
+}
+.icon{
+    margin: 30px 7px 0px 0px;
+    font-size: 24px; 
+}
+.thead-font{
+    font-size: 15px;
+}
+.upload-button{
+    float: right;
+    margin: 10px 0px 25px 0px ;
+}
+
+  input[type=file]::file-selector-button{
+    
+    margin-right: 20px;
+    border:none;
+    background-color: #1F51FF	;
+    color: white;
+    border-radius:4px ;
+    cursor: pointer;
+  }
+  input[type=file]{
+    margin-top:75px;
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .alert-success{
+    width: 300px;
+    float:right; 
+    border: 1px solid green;
+  }
+  .alert-error{
+    width: 300px;
+    border: 1px solid red;
+    float:right; 
+  }
+  .pagination{
+    float: right;
+    padding: 17px 10px ;
+  }
+  p,small{
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+    text-align: left;
+  }
+ input:invalid[focused='true'] ~p{
+    display: block;
+ }
+.home{
+    margin: 120px 10px;
+}
+.quote{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+}
+.home-button{
+    width: fit-content;
+    height: 45px;
+    border: 1px solid#212529;
+    background-color: #212529;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 10px ;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+.right-img{
+    width:100%;
+    height:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+  *{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.outline-card{
+    width:fit-content;
+    margin: 5% 0%;
+    padding: 50px 5px;
+    box-shadow: 0px 2px 4px 1px gray;
+    height: fit-content;
+    border-radius: 25px;
+
+}
+.card-head{
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 18px;
+    font-weight: bolder;
+
+}
+/* .outline-card{
+    width: fit-content;
+    margin-top: 5%;
+    padding: 27px 3px;
+    border: 2px solid rgb(81, 54, 255);
+
+} */
+/*.group{
+    display: flex;
+    flex-direction:row ;
+    margin-bottom: 25px;
+}
+.icon-button{
+    display: flex;
+    flex-direction: row;
+}
+.icon-button p{
+    margin :2px 10px;
+    text-align: center;
+}
+.in-button{
+    border:1px solid  rgb(81, 54, 255);
+    padding:5px 10px;
+    text-align: left;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgb(81, 54, 255);
+    color: white;
+    margin: 20px 95px;
+    float: right;
+    
+}
+.input-text{
+    border-radius: 3px solid;
+    border:1px solid grey; 
+    
+}
+.text-label{
+    font-size: 18px ;
+    padding:2px 20px 0px 5px ;
+    width: 290px;
+    text-align: left;
+}
+.dropdown{
+    background-color: black;
+    color:white;
+}
+.product-top{
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+.search-block{
+    margin : 50px 100px;
+    margin-bottom: 50px; 
+}
+.searchbar{
+    margin: 25px 0px;
+}
+.icon{
+    margin: 30px 7px 0px 0px;
+    font-size: 24px; 
+}
+.thead-font{
+    font-size: 15px;
+}
+.upload-button{
+    float: right;
+    margin: 10px 0px 25px 0px ;
+}
+  input[type=file]::file-selector-button{
+    
+    margin-right: 20px;
+    border:none;
+    background-color: #1F51FF	;
+    color: white;
+    border-radius:4px ;
+    cursor: pointer;
+  }
+  input[type=file]{
+    margin-top:75px;
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .alert{
+    width: 300px;
+    float:right;
+    
+  }
+  .pagination{
+    float: right;
+    padding: 5px;
+    
+  } */
